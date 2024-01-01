@@ -66,7 +66,7 @@ class BeFormValidation {
                 },
                 'val-phoneus': {
                     required: true,
-                    phoneUS: true
+                    phoneID: true,
                 },
                 'val-digits': {
                     required: true,

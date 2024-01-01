@@ -81,7 +81,7 @@
                     <div class="py-20">
                         <h1 class="font-w700 text-white mb-10">Nikmati product dari SFV AUP SERANG</h1>
                         <h2 class="h4 font-w400 text-white-op">product mulai dari Rp.15.000</h2>
-                        <a class="btn btn-hero btn-noborder btn-rounded btn-alt-success mb-10" href="javascript:void(0)">
+                        <a class="btn btn-hero btn-noborder btn-rounded btn-alt-success mb-10" href="{{route('product')}}">
                             <i class="fa fa-user-circle mr-5"></i> Lihat lebih banyak
                         </a>
                     </div>

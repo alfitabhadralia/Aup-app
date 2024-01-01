@@ -117,6 +117,9 @@
                 <li>
                     <a href=""><i class="fa fa-pencil"></i><span class="sidebar-mini-hide">Profile</span></a>
                 </li>
+                <li>
+                    <a href="{{route('admin.setting')}}"><i class="fa fa-wrench"></i><span class="sidebar-mini-hide">Settings</span></a>
+                </li>
             </ul>
         </div>
         <!-- END Side Navigation -->

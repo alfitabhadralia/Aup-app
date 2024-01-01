@@ -62,22 +62,8 @@
                         </div>
                     </div>
                     <div class="col-md-6 order-md-1 py-20">
-                        <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet
-                            adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut
-                            metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis
-                            purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                        <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet
-                            adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut
-                            metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis
-                            purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                        <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet
-                            adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut
-                            metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis
-                            purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
-                        <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet
-                            adipiscing luctus mauris adipiscing pretium eget fermentum, tristique lobortis est ut
-                            metus lobortis tortor tincidunt himenaeos habitant quis dictumst proin odio sagittis
-                            purus mi, nec taciti vestibulum quis in sit varius lorem sit metus mi.</p>
+                        <h3>{{$setting->where('nama', 'title_about')->first()->value}}</h3>
+                        <p>{{$setting->where('nama', 'deskripsi_about')->first()->value}}</p>
                     </div>
                 </div>
             </div>
@@ -91,86 +77,25 @@
         <div class="col-12 ">
             <div class="d-flex justify-content-center">
                 <div class="row">
-                    <!-- Row 1 -->
-                    <div class="col-xl-3">
-                        <div class="block">
-                            <div class="block-content block-content-full text-center bg-image"
-                                style="background-image: url('assets/media/photos/photo5@2x.jpg'); height: 200px;">
-                            </div>
-                            <div class="block-content block-content-full">
-                                <h4>Menanam benih udang</h4>
-                                <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet
-                                    adipiscing luctus mauris adipiscing pretium eget
-                                    fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos
-                                    habitant .</p>
-                            </div>
-                            <div class="block-content block-content-full text-center bg-body-light">
-                                <a class="btn btn-alt-secondary" href="javascript:void(0)">
-                                    <i class="fa fa-eye mr-5"></i> Detail..
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Row 2 -->
-                    <div class="col-xl-3">
-                        <div class="block">
-                            <div class="block-content block-content-full text-center bg-image"
-                                style="background-image: url('assets/media/photos/photo2@2x.jpg'); height: 200px;">
-                            </div>
-                            <div class="block-content block-content-full">
-                                <h4>Menanam benih udang</h4>
-                                <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet
-                                    adipiscing luctus mauris adipiscing pretium eget
-                                    fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos
-                                    habitant .</p>
-                            </div>
-                            <div class="block-content block-content-full text-center bg-body-light">
-                                <a class="btn btn-alt-secondary" href="javascript:void(0)">
-                                    <i class="fa fa-eye mr-5"></i> Detail..
-                                </a>
+                    @foreach ($kegiatan as $item)    
+                        <!-- Row -->
+                        <div class="col-md-6 col-xl-3">
+                            <div class="block">
+                                <div class="block-content block-content-full text-center bg-image"
+                                    style="background-image: url('assets/media/kegiatan/{{$item->gambar}}'); height: 200px;">
+                                </div>
+                                <div class="block-content block-content-full">
+                                    <h5>{{substr($item->judul, 0, 50)}}..</h5>
+                                    <p>{{substr($item->deskripsi, 0, 200)}}..</p>
+                                </div>
+                                <div class="block-content block-content-full text-center bg-body-light">
+                                    <a class="btn btn-alt-secondary" href="javascript:void(0)">
+                                        <i class="fa fa-eye mr-5"></i> Detail..
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Row 3 -->
-                    <div class="col-xl-3">
-                        <div class="block">
-                            <div class="block-content block-content-full text-center bg-image"
-                                style="background-image: url('assets/media/photos/photo3@2x.jpg'); height: 200px;">
-                            </div>
-                            <div class="block-content block-content-full">
-                                <h4>Menanam benih udang</h4>
-                                <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet
-                                    adipiscing luctus mauris adipiscing pretium eget
-                                    fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos
-                                    habitant .</p>
-                            </div>
-                            <div class="block-content block-content-full text-center bg-body-light">
-                                <a class="btn btn-alt-secondary" href="javascript:void(0)">
-                                    <i class="fa fa-eye mr-5"></i> Detail..
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Row 4 -->
-                    <div class="col-xl-3">
-                        <div class="block">
-                            <div class="block-content block-content-full text-center bg-image"
-                                style="background-image: url('assets/media/photos/photo4@2x.jpg'); height: 200px;">
-                            </div>
-                            <div class="block-content block-content-full">
-                                <h4>Menanam benih udang</h4>
-                                <p>Dolor posuere proin blandit accumsan senectus netus nullam curae, ornare laoreet
-                                    adipiscing luctus mauris adipiscing pretium eget
-                                    fermentum, tristique lobortis est ut metus lobortis tortor tincidunt himenaeos
-                                    habitant .</p>
-                            </div>
-                            <div class="block-content block-content-full text-center bg-body-light">
-                                <a class="btn btn-alt-secondary" href="javascript:void(0)">
-                                    <i class="fa fa-eye mr-5"></i> Detail..
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -231,158 +156,46 @@
         <div class="col-12">
             <div class="d-flex justify-content-center">
                 <div class="row">
-                    <!-- Row 4 -->
-                    <div class="col-xl-3">
-                        <div class="block  ">
-                            <div class="block-content p-0 overflow-hidden">
-                                <a class="img-link" href="be_pages_real_estate_listing.html">
-                                    <img class="img-fluid  " src="assets/media/photos/photo35.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="block-content border-bottom">
-                                <h4 class="font-size-h5 mb-10">Downtown Apartment</h4>
-                                <h5 class="font-size-h1 font-w300 mb-5">$350,000</h5>
-                                <p class="text-muted">
-                                    <i class="fa fa-map-pin mr-5"></i> 965 Westwood Avenue, NY
-                                </p>
-                            </div>
-                            <div class="block-content">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p>
-                                            <i class="fa fa-fw fa-bed text-muted mr-5"></i> <strong>2</strong>
-                                            Bedrooms
-                                        </p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p>
-                                            <i class="fa fa-fw fa-bath text-muted mr-5"></i> <strong>1</strong>
-                                            Bathroom
-                                        </p>
+                    @foreach ($product as $value)
+                        <!-- Row 4 -->
+                        <div class="col-xl-3">
+                            <div class="block  ">
+                                <div class="block-content p-0 overflow-hidden">
+                                    <a class="img-link" href="be_pages_real_estate_listing.html">
+                                        <img class="img-fluid  " src="assets/media/product/{{$value->gambar}}" alt="">
+                                    </a>
+                                </div>
+                                <div class="block-content border-bottom">
+                                    <h4 class="font-size-h5 mb-10">{{$value->nama}}</h4>
+                                    <h5 class="font-size-h1 font-w300 mb-5">{{number_format($value->harga, 0,',','.')}}</h5>
+                                    <p class="text-muted">
+                                        <i class="fa fa-map-pin mr-5"></i> 965 Westwood Avenue, NY
+                                    </p>
+                                </div>
+                                <div class="block-content">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <p>
+                                                <i class="fa fa-fw fa-bed text-muted mr-5"></i> <strong>2</strong>
+                                                Bedrooms
+                                            </p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p>
+                                                <i class="fa fa-fw fa-bath text-muted mr-5"></i> <strong>1</strong>
+                                                Bathroom
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="block-content block-content-full text-center bg-body-light">
-                                <a class="btn btn-alt-secondary" href="javascript:void(0)">
-                                    <i class="fa fa-eye mr-5"></i> Detail ...
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Row 4 -->
-                    <div class="col-xl-3">
-                        <div class="block  ">
-                            <div class="block-content p-0 overflow-hidden">
-                                <a class="img-link" href="be_pages_real_estate_listing.html">
-                                    <img class="img-fluid  " src="assets/media/photos/photo35.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="block-content border-bottom">
-                                <h4 class="font-size-h5 mb-10">Downtown Apartment</h4>
-                                <h5 class="font-size-h1 font-w300 mb-5">$350,000</h5>
-                                <p class="text-muted">
-                                    <i class="fa fa-map-pin mr-5"></i> 965 Westwood Avenue, NY
-                                </p>
-                            </div>
-                            <div class="block-content">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p>
-                                            <i class="fa fa-fw fa-bed text-muted mr-5"></i> <strong>2</strong>
-                                            Bedrooms
-                                        </p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p>
-                                            <i class="fa fa-fw fa-bath text-muted mr-5"></i> <strong>1</strong>
-                                            Bathroom
-                                        </p>
-                                    </div>
+                                <div class="block-content block-content-full text-center bg-body-light">
+                                    <a class="btn btn-alt-secondary" href="javascript:void(0)">
+                                        <i class="fa fa-eye mr-5"></i> Detail ...
+                                    </a>
                                 </div>
                             </div>
-                            <div class="block-content block-content-full text-center bg-body-light">
-                                <a class="btn btn-alt-secondary" href="javascript:void(0)">
-                                    <i class="fa fa-eye mr-5"></i> Detail ...
-                                </a>
-                            </div>
                         </div>
-                    </div>
-                    <!-- Row 4 -->
-                    <div class="col-xl-3">
-                        <div class="block  ">
-                            <div class="block-content p-0 overflow-hidden">
-                                <a class="img-link" href="be_pages_real_estate_listing.html">
-                                    <img class="img-fluid  " src="assets/media/photos/photo35.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="block-content border-bottom">
-                                <h4 class="font-size-h5 mb-10">Downtown Apartment</h4>
-                                <h5 class="font-size-h1 font-w300 mb-5">$350,000</h5>
-                                <p class="text-muted">
-                                    <i class="fa fa-map-pin mr-5"></i> 965 Westwood Avenue, NY
-                                </p>
-                            </div>
-                            <div class="block-content">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p>
-                                            <i class="fa fa-fw fa-bed text-muted mr-5"></i> <strong>2</strong>
-                                            Bedrooms
-                                        </p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p>
-                                            <i class="fa fa-fw fa-bath text-muted mr-5"></i> <strong>1</strong>
-                                            Bathroom
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block-content block-content-full text-center bg-body-light">
-                                <a class="btn btn-alt-secondary" href="javascript:void(0)">
-                                    <i class="fa fa-eye mr-5"></i> Detail ...
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Row 4 -->
-                    <div class="col-xl-3">
-                        <div class="block  ">
-                            <div class="block-content p-0 overflow-hidden">
-                                <a class="img-link" href="be_pages_real_estate_listing.html">
-                                    <img class="img-fluid  " src="assets/media/photos/photo35.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="block-content border-bottom">
-                                <h4 class="font-size-h5 mb-10">Downtown Apartment</h4>
-                                <h5 class="font-size-h1 font-w300 mb-5">$350,000</h5>
-                                <p class="text-muted">
-                                    <i class="fa fa-map-pin mr-5"></i> 965 Westwood Avenue, NY
-                                </p>
-                            </div>
-                            <div class="block-content">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <p>
-                                            <i class="fa fa-fw fa-bed text-muted mr-5"></i> <strong>2</strong>
-                                            Bedrooms
-                                        </p>
-                                    </div>
-                                    <div class="col-6">
-                                        <p>
-                                            <i class="fa fa-fw fa-bath text-muted mr-5"></i> <strong>1</strong>
-                                            Bathroom
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="block-content block-content-full text-center bg-body-light">
-                                <a class="btn btn-alt-secondary" href="javascript:void(0)">
-                                    <i class="fa fa-eye mr-5"></i> Detail ...
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

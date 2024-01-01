@@ -3,6 +3,10 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SettingController;
+use App\Models\Kegiatan;
+use App\Models\Product;
+use App\Models\Setting;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +21,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('page.frontend.home');
+    $setting = Setting::all();
+    $product = Product::limit(4)->get();
+    $kegiatan = Kegiatan::where('headline', 1)->limit(4)->get();
+
+    return view('page.frontend.home',compact('setting', 'kegiatan', 'product'));
 });
 Route::get('/example', function () {
     return view('page.admin.example');
@@ -29,7 +37,7 @@ Route::get('/kegiatan', [KegiatanController::class, 'home'])->name('kegiatan');
 
 Route::get('/product', function () {
     return view('page.frontend.product');
-});
+})->name('product');
 
 Route::prefix('admin')->group(function(){
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -47,4 +55,8 @@ Route::prefix('admin')->group(function(){
     Route::get('/kegiatan/show/{id}', [KegiatanController::class, 'show'])->name('admin.kegiatan.show');
     Route::post('/kegiatan/update/{id}', [KegiatanController::class, 'update'])->name('admin.kegiatan.update');
     Route::post('/kegiatan/delete/{id}', [KegiatanController::class, 'delete'])->name('admin.kegiatan.delete');
+
+    Route::get('setting', [SettingController::class, 'index'])->name('admin.setting');
+    Route::post('/setting/update', [SettingController::class, 'update'])->name('admin.setting.update');
+
 });
