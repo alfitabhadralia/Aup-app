@@ -2,6 +2,11 @@
 @section('title')
     <title>Kegiatan - AUP</title>
 @endsection
+@section('breadcrumb')
+    <a class="breadcrumb-item" href="{{route('dashboard')}}">Admin</a>
+    <a class="breadcrumb-item" href="{{route('admin.kegiatan')}}">Kegiatan</a>
+    {{-- <span class="breadcrumb-item active">Create</span> --}}
+@endsection
 @section('content')
     <!-- Main Container -->
     <main id="main-container">

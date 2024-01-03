@@ -11,11 +11,7 @@
             </button>
             <!-- END Toggle Sidebar -->
             <!-- User Dropdown -->
-            <div class="btn-group">
-                <button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown">
-                    <span class="d-none d-sm-inline-block">Sistem-AUP</span>
-                </button>
-            </div>
+            @yield('breadcrumb')
             <!-- END User Dropdown -->
         </div>
         <!-- END Left Section -->

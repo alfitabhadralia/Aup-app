@@ -2,6 +2,10 @@
 @section('title')
     <title>Setting - AUP</title>
 @endsection
+@section('breadcrumb')
+    <a class="breadcrumb-item" href="{{route('dashboard')}}">Admin</a>
+    <span class="breadcrumb-item active">Setting</span>
+@endsection
 @section('content')
     <!-- Main Container -->
     <main id="main-container">

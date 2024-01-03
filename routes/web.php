@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\ProductController;
@@ -39,6 +40,12 @@ Route::get('/product', function () {
     return view('page.frontend.product');
 })->name('product');
 
+
+Route::get('/login', [AuthController::class, 'login'])->name('login');
+Route::post('/login', [AuthController::class, 'login_action'])->name('login.action');
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+
+
 Route::prefix('admin')->group(function(){
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
@@ -58,5 +65,4 @@ Route::prefix('admin')->group(function(){
 
     Route::get('setting', [SettingController::class, 'index'])->name('admin.setting');
     Route::post('/setting/update', [SettingController::class, 'update'])->name('admin.setting.update');
-
 });
