@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\KegiatanController;
 use App\Http\Controllers\ProductController;
@@ -24,21 +25,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $setting = Setting::all();
     $product = Product::limit(4)->get();
-    $kegiatan = Kegiatan::where('headline', 1)->limit(4)->get();
+    $kegiatan = Kegiatan::whereNot('kategori', 'berita')->get();
+    $berita = Kegiatan::where('kategori', 'berita')->limit(3)->orderBy('id','desc')->get();
+    $gallery = Kegiatan::all();
 
-    return view('page.frontend.home',compact('setting', 'kegiatan', 'product'));
+    return view('page.frontend.home',compact('setting', 'kegiatan', 'product', 'berita', 'gallery'));
 });
-Route::get('/example', function () {
-    return view('page.admin.example');
-});
+// Route::get('/example', function () {
+//     return view('page.admin.example');
+// });
 // Route::get('/kegiatan', function () {
 //     return view('page.frontend.kegiatan');
 // });
 Route::get('/kegiatan', [KegiatanController::class, 'home'])->name('kegiatan');
+Route::get('/kegiatan/{id}', [KegiatanController::class, 'detail'])->name('kegiatan.detail');
 
-Route::get('/product', function () {
-    return view('page.frontend.product');
-})->name('product');
+Route::get('/product', [ProductController::class, 'home'])->name('product');
+Route::get('/product/{id}', [ProductController::class, 'detail'])->name('product.detail');
+
 
 
 Route::get('/login', [AuthController::class, 'login'])->name('login');
@@ -62,6 +66,13 @@ Route::prefix('admin')->group(function(){
     Route::get('/kegiatan/show/{id}', [KegiatanController::class, 'show'])->name('admin.kegiatan.show');
     Route::post('/kegiatan/update/{id}', [KegiatanController::class, 'update'])->name('admin.kegiatan.update');
     Route::post('/kegiatan/delete/{id}', [KegiatanController::class, 'delete'])->name('admin.kegiatan.delete');
+
+    Route::get('berita', [BeritaController::class, 'index'])->name('admin.berita');
+    Route::get('/berita/create', [BeritaController::class, 'create'])->name('admin.berita.create');
+    Route::post('/berita/store', [BeritaController::class, 'store'])->name('admin.berita.store');
+    Route::get('/berita/show/{id}', [BeritaController::class, 'show'])->name('admin.berita.show');
+    Route::post('/berita/update/{id}', [BeritaController::class, 'update'])->name('admin.berita.update');
+    Route::post('/berita/delete/{id}', [BeritaController::class, 'delete'])->name('admin.berita.delete');
 
     Route::get('setting', [SettingController::class, 'index'])->name('admin.setting');
     Route::post('/setting/update', [SettingController::class, 'update'])->name('admin.setting.update');

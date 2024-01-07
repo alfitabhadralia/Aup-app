@@ -6,10 +6,13 @@
             <div class="content-header-section">
                 <!-- Logo Section -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                <button type="button" class="btn btn-dual-secondary" data-toggle="layout"
+                {{-- <button type="button" class="btn btn-dual-secondary" data-toggle="layout"
                     data-action="header_search_on">
                     <span class="d-none d-sm-inline-block">SFV-AUP-Serang</span>
-                </button>
+                </button> --}}
+                <img class="img-fluid" style="width: 70px;" src="{{asset('assets/media/home/logo-aup.png')}}" alt="">
+                <img class="img-fluid" style="width: 70px;" src="{{asset('assets/media/home/logo-sfv.png')}}" alt="">
+
                 <!-- END Logo Section -->
 
             </div>
@@ -20,10 +23,10 @@
 
                 <!-- Logo Section -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                <button type="button" class="btn btn-dual-secondary" data-toggle="layout"
+                <a href="/" class="btn btn-dual-secondary" data-toggle="layout"
                     data-action="header_search_on">
                     <span class="d-none d-sm-inline-block">Beranda</span>
-                </button>
+                </a>
                 <!-- END Logo Section -->
 
                 <!-- Logo Section -->

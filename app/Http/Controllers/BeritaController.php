@@ -9,15 +9,15 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 use Yajra\DataTables\DataTables;
 
-class KegiatanController extends Controller
+class BeritaController extends Controller
 {
     //
     public function index(Request $request){
-        $kegiatan = Kegiatan::all();
-        $kegiatanToday = Kegiatan::whereDate('created_at', Carbon::today())->get();
+        $berita = Kegiatan::where('kategori', 'berita')->get();
+        $beritaToday = Kegiatan::where('kategori', 'berita')->whereDate('created_at', Carbon::today())->get();
         
         if ($request->ajax()) {
-            return DataTables::of($kegiatan)
+            return DataTables::of($berita)
                 ->addIndexColumn()
                 ->editColumn('gambar', function($row) {
                     $gambar = ($row->gambar) ? asset("assets/media/kegiatan/".$row->gambar) : asset("assets/media/avatars/avatar0.jpg");
@@ -53,10 +53,10 @@ class KegiatanController extends Controller
         }
 
 
-        return view('page.admin.kegiatan.index', compact('kegiatan', 'kegiatanToday'));
+        return view('page.admin.berita.index', compact('berita', 'beritaToday'));
     }
     public function create(Request $request){
-        return view('page.admin.kegiatan.create');
+        return view('page.admin.berita.create');
     }
 
     public function store(Request $request){
@@ -81,24 +81,24 @@ class KegiatanController extends Controller
             'judul' => $request->judul,
             'penulis' => 'admin',
             'headline' => $request->headline,
-            'kategori' => 'kegiatan',
+            'kategori' => 'berita',
             'deskripsi' => $request->deskripsi,
             'gambar' => $file_name,
         ]);
 
         if ($save) {
             toast("Success Add Data", 'success');
-            return redirect()->route('admin.kegiatan');
+            return redirect()->route('admin.berita');
         }
         toast("Failed Add Data", 'error');
-        return redirect()->route('admin.kegiatan');
+        return redirect()->route('admin.berita');
     }
     public function show($id,Request $request){
-        $kegiatan = Kegiatan::find($id);
+        $berita = Kegiatan::find($id);
         if ($request->ajax()) {
-            return $kegiatan;
+            return $berita;
         }
-        return view('page.admin.kegiatan.edit', compact('kegiatan'));
+        return view('page.admin.berita.edit', compact('berita'));
     }
 
     public function update($id,Request $request){
@@ -114,28 +114,28 @@ class KegiatanController extends Controller
             return redirect()->back()->withInput();
         }
         
-        $kegiatan = Kegiatan::find($id);
-        $kegiatan->judul = $request->judul;
-        $kegiatan->headline = $request->headline;
-        $kegiatan->deskripsi = $request->deskripsi;
+        $berita = Kegiatan::find($id);
+        $berita->judul = $request->judul;
+        $berita->headline = $request->headline;
+        $berita->deskripsi = $request->deskripsi;
         
         if ($request->file('gambar')) {
-            File::delete('assets/media/kegiatan/'.$kegiatan->gambar);
+            File::delete('assets/media/kegiatan/'.$berita->gambar);
             
             $new_image = $request->file('gambar');
-            $file_name = time() . $kegiatan->nama.'.' . $new_image->extension();
+            $file_name = time() . $berita->nama.'.' . $new_image->extension();
             $new_image->move('assets/media/kegiatan', $file_name);
 
-            $kegiatan->gambar = $file_name;
+            $berita->gambar = $file_name;
         }
-        $save = $kegiatan->update();
+        $save = $berita->update();
         
         if ($save) {
             toast("Success Updated Data", 'success');
-            return redirect()->route('admin.kegiatan');
+            return redirect()->route('admin.berita');
         }
         toast("Failed Updated Data", 'error');
-        return redirect()->route('admin.kegiatan');
+        return redirect()->route('admin.berita');
     }
     public function delete($id){
         $product = Kegiatan::find($id);
@@ -149,15 +149,15 @@ class KegiatanController extends Controller
     }
 
     public function home(){
-        $kegiatan = Kegiatan::paginate(8);
-        $kegiatanHeadline = Kegiatan::where('headline', 1)->limit(3)->get();
-        // return $kegiatan;
-        return view('page.frontend.kegiatan', compact('kegiatan', 'kegiatanHeadline'));
+        $berita = Kegiatan::paginate(8);
+        $beritaHeadline = Kegiatan::where('headline', 1)->limit(3)->get();
+        // return $berita;
+        return view('page.frontend.berita', compact('berita', 'beritaHeadline'));
     }
     public function detail($id){
-        $kegiatan = Kegiatan::find($id);
-        $kegiatanHeadline = Kegiatan::where('headline', 1)->limit(3)->get();
+        $berita = Kegiatan::find($id);
+        $beritaHeadline = Kegiatan::where('headline', 1)->limit(3)->get();
 
-        return view('page.frontend.Detailkegiatan', compact('kegiatan', 'kegiatanHeadline'));
+        return view('page.frontend.Detailberita', compact('berita', 'beritaHeadline'));
     }
 }

@@ -23,7 +23,7 @@
             @foreach ($kegiatanHeadline as $value)    
                 <!-- Row #1 -->
                 <div class="col-md-6 col-xl-4">
-                    <a class="block block-transparent border-left border-5x border-primary bg-image" style="background-image: url('assets/media/kegiatan/{{$value->gambar}}');" href="javascript:void(0)">
+                    <a class="block block-transparent border-left border-5x border-primary bg-image" style="background-image: url('{{asset('assets/media/kegiatan/'.$value->gambar)}}');" href="{{route('kegiatan.detail', $value->id)}}">
                         <div class="block-content block-content-full bg-black-op">
                             <div class="pt-100">
                                 <h3 class="h4 text-white font-w700 mb-10">{{$value->judul}}</h3>
@@ -105,7 +105,7 @@
                                     <p>{{substr($item->deskripsi, 0, 200)}}..</p>
                                 </div>
                                 <div class="block-content block-content-full text-center bg-body-light">
-                                    <a class="btn btn-alt-secondary" href="javascript:void(0)">
+                                    <a class="btn btn-alt-secondary" href="{{route('kegiatan.detail', $item->id)}}">
                                         <i class="fa fa-eye mr-5"></i> Detail..
                                     </a>
                                 </div>
