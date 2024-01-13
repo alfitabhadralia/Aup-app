@@ -152,12 +152,14 @@ class ProductController extends Controller
     }
     public function home(){
         $product = Product::paginate(8);
+        $setting = Setting::all();
 
         return view('page.frontend.product', compact('product', 'setting'));
     }
     public function detail($id){
         $product = Product::find($id);
-
+        $setting = Setting::all();
+        
         return view('page.frontend.Detailproduct', compact('product', 'setting'));
     }
 }
