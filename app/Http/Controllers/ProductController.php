@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Setting;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -12,6 +13,10 @@ use Yajra\DataTables\Facades\DataTables;
 
 class ProductController extends Controller
 {
+    // public function __construct() {
+    //     // $this->var = $var;
+    //     $setting = Setting::all();
+    // }
     //
     public function index(Request $request) {
         $product = Product::all();
@@ -144,5 +149,15 @@ class ProductController extends Controller
             return ['msg' => 'Success Delete Data', 'code' => 200];
         }
         return ['msg' => 'Error Delete Data','code' => 500];
+    }
+    public function home(){
+        $product = Product::paginate(8);
+
+        return view('page.frontend.product', compact('product', 'setting'));
+    }
+    public function detail($id){
+        $product = Product::find($id);
+
+        return view('page.frontend.Detailproduct', compact('product', 'setting'));
     }
 }

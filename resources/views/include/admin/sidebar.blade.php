@@ -97,7 +97,20 @@
                         </li>
                     </ul>
                 </li>
-                <li class="">
+                <li class="{{ (request()->segment(2) == 'berita') ? 'open' : '' }}">
+                    <a class="nav-submenu" data-toggle="nav-submenu" href="#">
+                        <i class="fa fa-newspaper-o"></i><span class="sidebar-mini-hide">Berita</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="{{route('admin.berita')}}">Manage</a>
+                        </li>
+                        <li>
+                            <a href="{{route('admin.berita.create')}}">Add berita</a>
+                        </li>
+                    </ul>
+                </li>
+                {{-- <li class="">
                     <a class="nav-submenu" data-toggle="nav-submenu" href="#">
                         <i class="fa fa-paypal"></i><span class="sidebar-mini-hide">Payments</span>
                     </a>
@@ -112,7 +125,7 @@
                             <a href="">Add Payment</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 <li class="nav-main-heading"><span class="sidebar-mini-visible">ST</span><span class="sidebar-mini-hidden">Settings</span></li>
                 <li>
                     <a href=""><i class="fa fa-pencil"></i><span class="sidebar-mini-hide">Profile</span></a>
