@@ -191,8 +191,8 @@
                         <div class="col-xl-3">
                             <div class="block  ">
                                 <div class="block-content p-0 overflow-hidden">
-                                    <a class="img-link" href="be_pages_real_estate_listing.html">
-                                        <img class="img-fluid  " src="{{asset('assets/media/product/'.$value->gambar)}}" alt="" style="min-height: 200px;">
+                                    <a class="img-link" href="{{asset('assets/media/product/'.$value->gambar)}}">
+                                        <img class="img-fluid" src="{{asset('assets/media/product/'.$value->gambar)}}" alt="" style="min-height: 200px; max-height: 210px;margin-left: auto;margin-right: auto;">
                                     </a>
                                 </div>
                                 <div class="block-content border-bottom">

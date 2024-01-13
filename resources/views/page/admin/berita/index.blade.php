@@ -68,6 +68,11 @@
                         <a href="{{route('admin.berita.create')}}" type="button" class="btn btn-block-option">
                             <i class="si si-plus"> Tambah berita</i>
                         </a>
+                        {{-- <select class="js-select2" id="headline" name="headline" data-placeholder="Choose one..">
+                            <option value="">ALL</option>
+                            <option value="true">True</option>
+                            <option value="false">False</option>
+                        </select> --}}
                     </div>
                 </div>
                 <div class="block-content block-content-full">
@@ -167,34 +172,42 @@
             }
         });
         $(document).ready(function () {
-            $('#table-berita').DataTable({
+            var table = $('#table-berita').DataTable({
                 processing: true,
                 serverSide: true,
                 ajax: "{{ route('admin.berita') }}",
-                columns: [{
-                    data: 'DT_RowIndex',
-                    name: 'no',
-                }, 
-                {
-                    data: 'judul',
-                    name: 'judul'
-                }, 
-                {
-                    data: 'headline',
-                    name: 'headline'
-                },
-                {
-                    data: 'gambar',
-                    name: 'gambar'
-                },
-                {
-                    data: 'created_at',
-                    name: 'dibuat'
-                },  
-                {
-                    data: 'action',
-                    name: 'action',
-                }]
+                columns: [
+                    {
+                        data: 'DT_RowIndex',
+                        name: 'no',
+                    }, 
+                    {
+                        data: 'judul',
+                        name: 'judul'
+                    }, 
+                    {
+                        data: 'headline',
+                        name: 'headline'
+                    },
+                    {
+                        data: 'gambar',
+                        name: 'gambar'
+                    },
+                    {
+                        data: 'created_at',
+                        name: 'dibuat'
+                    },  
+                    {
+                        data: 'action',
+                        name: 'action',
+                    }
+                ],
+                initComplete: function (setting, json) {
+                    $('#headline').on('change', function() {
+                        let hl = $(this).val();
+                        table.columns(2).search(hl).draw();
+                    })
+                }
             });
             $('#btn_refresh_berita').on('click', function () {
                 refreshberita();

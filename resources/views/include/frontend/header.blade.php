@@ -31,10 +31,10 @@
 
                 <!-- Logo Section -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                <button type="button" class="btn btn-dual-secondary" data-toggle="layout"
+                <a href="#about" class="btn btn-dual-secondary" data-toggle="layout"
                     data-action="header_search_on">
-                    <span class="d-none d-sm-inline-block">Tentang Kami</span>
-                </button>
+                    <span class="d-none d-sm-inline-block">Tentang</span>
+                </a>
                 <!-- END Logo Section -->
 
                 <!-- Logo Section -->
@@ -55,10 +55,10 @@
 
                 <!-- Logo Section -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                <button type="button" class="btn btn-dual-secondary" data-toggle="layout"
+                <a href="#page-footer" class="btn btn-dual-secondary" data-toggle="layout"
                     data-action="header_search_on">
                     <span class="d-none d-sm-inline-block">Kontak</span>
-                </button>
+                </a>
                 <!-- END Logo Section -->
 
             </div>
