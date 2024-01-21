@@ -25,9 +25,9 @@
 
                 <!-- Logo -->
                 <div class="content-header-item">
-                    <a class="link-effect font-w700" href="index.html">
+                    <a class="link-effect font-w700" href="{{route('dashboard')}}">
                         <i class="si si-fire text-primary"></i>
-                        <span class="font-size-xl text-dual-primary-dark">code</span><span class="font-size-xl text-primary">base</span>
+                        <span class="font-size-xl text-dual-primary-dark">SPV</span><span class="font-size-xl text-primary">AUP</span>
                     </a>
                 </div>
                 <!-- END Logo -->
@@ -51,7 +51,7 @@
                 </a>
                 <ul class="list-inline mt-10">
                     <li class="list-inline-item">
-                        <a class="link-effect text-dual-primary-dark font-size-xs font-w600 text-uppercase" href="javascript:void(0)">Dr. Stone</a>
+                        <a class="link-effect text-dual-primary-dark font-size-xs font-w600 text-uppercase" href="javascript:void(0)">{{auth()->user()->username}}</a>
                     </li>
                     <li class="list-inline-item">
                         <a class="link-effect text-dual-primary-dark" href="javascript:void(0)">
@@ -107,6 +107,19 @@
                         </li>
                         <li>
                             <a href="{{route('admin.berita.create')}}">Add berita</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="{{ (request()->segment(2) == 'kerjasama') ? 'open' : '' }}">
+                    <a class="nav-submenu" data-toggle="nav-submenu" href="#">
+                        <i class="fa fa-newspaper-o"></i><span class="sidebar-mini-hide">kerjasama</span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="{{route('admin.kerjasama')}}">Manage</a>
+                        </li>
+                        <li>
+                            <a href="{{route('admin.kerjasama.create')}}">Add kerjasama</a>
                         </li>
                     </ul>
                 </li>

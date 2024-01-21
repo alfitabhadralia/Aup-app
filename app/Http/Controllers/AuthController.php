@@ -11,11 +11,12 @@ class AuthController extends Controller
 {
     public function register()
     {
-        return view('register');
+        return view('page.admin.register');
     }
 
     public function register_action(Request $request)
     {
+        // dd($request->all());
         $request->validate([
             'email' => 'required',
             'username' => 'required',
@@ -24,11 +25,12 @@ class AuthController extends Controller
         ]);
 
         $user = User::create([
-            'email' => $request->email,
             'username' => $request->username,
             'password' => Hash::make($request->password),
+            'email' => $request->email,
+            'role' => 'admin'
         ]);
-
+        
         return redirect()->route('login')->with('success', 'Registration success. Please login!');
     }
 

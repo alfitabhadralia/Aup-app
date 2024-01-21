@@ -137,7 +137,7 @@
                 <div class="block-header block-header-default">
                     <h3 class="block-title">Current Product</h3>
                     <div class="block-options">
-                        <button type="button" id="btn_refresh_product" class="btn-block-option">
+                        <button type="button" onclick="refresh(product)" class="btn-block-option">
                             <i class="si si-refresh"></i>
                         </button>
                     </div>
@@ -165,11 +165,11 @@
             <!-- END Product -->
 
             <!-- Kegiatan -->
-            <div class="block block-rounded block-bordered invisible" data-toggle="appear">
+            <div id="kegiatan" class="block block-rounded block-bordered invisible" data-toggle="appear">
                 <div class="block-header block-header-default">
                     <h3 class="block-title">Kegiatan</h3>
                     <div class="block-options">
-                        <button type="button" id="btn_refresh_kegiatan" class="btn-block-option">
+                        <button type="button" onclick="refresh(kegiatan)" class="btn-block-option">
                             <i class="si si-refresh"></i>
                         </button>
                     </div>
@@ -196,101 +196,37 @@
             </div>
             <!-- END Kegiatan -->
 
-            <!-- Payments -->
-            <div class="block block-rounded block-bordered invisible" data-toggle="appear">
+            <!-- Kerjasama -->
+            <div id="kerjasama" class="block block-rounded block-bordered invisible" data-toggle="appear">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Open Payments</h3>
+                    <h3 class="block-title">Kerjasama</h3>
                     <div class="block-options">
-                        <button type="button" class="btn-block-option" data-toggle="block-option" data-action="state_toggle" data-action-mode="demo">
+                        <button type="button" onclick="refresh(kerjasama)" class="btn-block-option" data-toggle="block-option" 
+                            data-action="state_toggle" data-action-mode="demo">
                             <i class="si si-refresh"></i>
-                        </button>
-                        <button type="button" class="btn-block-option">
-                            <i class="si si-wrench"></i>
                         </button>
                     </div>
                 </div>
                 <div class="block-content block-content-full">
                     <div class="table-responsive">
-                        <table class="table table-borderless table-hover table-striped table-vcenter mb-0">
+                        <!-- Dynamic Table Full -->
+                        <!-- DataTables functionality is initialized with .js-dataTable-full class in js/pages/be_tables_datatables.min.js which was auto compiled from _es6/pages/be_tables_datatables.js -->
+                        <table id="table-kerjasama" class="table table-borderless table-hover mb-0 table-striped table-vcenter">
                             <thead>
                                 <tr>
-                                    <th style="width: 100px;">ID</th>
-                                    <th>Patient</th>
-                                    <th>Invoice</th>
-                                    <th>Due</th>
-                                    <th>Actions</th>
-                                    <th class="text-right">Amount</th>
+                                    <th class="d-none d-sm-table-cell" style="width: 30px">No</th>
+                                    <th class="d-none d-sm-table-cell" style="width: auto;">Name</th>   
+                                    <th class="d-none d-sm-table-cell">gambar</th>
+                                    <th class="d-none d-sm-table-cell">dibuat</th>
+                                    <th class="d-none d-sm-table-cell" style="width: 300px;">Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <a class="font-w600" href="javascript:void(0)">158214</a>
-                                    </td>
-                                    <td>
-                                        <a href="javascript:void(0)">Carl Wells</a>
-                                    </td>
-                                    <td>
-                                        <a href="javascript:void(0)">
-                                            INV_158214.pdf
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <span class="badge badge-primary">tomorrow</span>
-                                    </td>
-                                    <td>
-                                        <a class="btn btn-sm btn-secondary m-5" href="javascript:void(0)">
-                                            <i class="fa fa-pencil text-primary mr-5"></i> Edit
-                                        </a>
-                                        <a class="btn btn-sm btn-secondary m-5" href="javascript:void(0)">
-                                            <i class="fa fa-times text-danger mr-5"></i> Cancel
-                                        </a>
-                                    </td>
-                                    <td class="text-right">
-                                        $3.500,00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a class="font-w600" href="javascript:void(0)">158213</a>
-                                    </td>
-                                    <td>
-                                        <a href="javascript:void(0)">Jack Estrada</a>
-                                    </td>
-                                    <td>
-                                        <a href="javascript:void(0)">
-                                            INV_158213.pdf
-                                        </a>
-                                    </td>
-                                    <td>
-                                        <span class="badge badge-primary">tomorrow</span>
-                                    </td>
-                                    <td>
-                                        <a class="btn btn-sm btn-secondary m-5" href="javascript:void(0)">
-                                            <i class="fa fa-pencil text-primary mr-5"></i> Edit
-                                        </a>
-                                        <a class="btn btn-sm btn-secondary m-5" href="javascript:void(0)">
-                                            <i class="fa fa-times text-danger mr-5"></i> Cancel
-                                        </a>
-                                    </td>
-                                    <td class="text-right">
-                                        $1.280,00
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="5" class="text-right">
-                                        <strong class="text-uppercase">Total Due</strong>
-                                    </td>
-                                    <td class="text-right">
-                                        <strong>$4.780,00</strong>
-                                    </td>
-                                </tr>
-                            </tbody>
                         </table>
+                        <!-- END Dynamic Table Full -->
                     </div>
                 </div>
             </div>
-            <!-- END Payments -->
+            <!-- END Kerjasama -->
         </div>
         <!-- END Page Content -->
 
@@ -362,26 +298,91 @@
                     name: 'action',
                 }]
             });
-            $('#btn_refresh_product').on('click', function () {
-                refreshProduct();
+            $('#table-kerjasama').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('admin.kerjasama') }}",
+                columns: [{
+                    data: 'DT_RowIndex',
+                    name: 'no',
+                }, 
+                {
+                    data: 'nama',
+                    name: 'nama'
+                },
+                {
+                    data: 'gambar',
+                    name: 'gambar'
+                },
+                {
+                    data: 'created_at',
+                    name: 'dibuat'
+                },  
+                {
+                    data: 'action',
+                    name: 'action',
+                }]
             });
+        
+            // $('#btn_refresh_product').on('click', function () {
+            //     refreshProduct();
+            // });
         });
 
-        function refreshProduct() {
-            $.ajax({
-                url: "{{route('admin.product')}}",
-                type: "GET",
-                dataType: "JSON",
-                beforeSend: function () {
-                    $('#product').addClass('block-mode-loading');
-                },
-                success: function (res) {
-                    $('#product').removeClass('block-mode-loading');
-                }, 
-                error: function (err) {
+        function refresh(tabel) {
+            console.log(tabel);
+            switch (tabel) {
+                case 'berita':
+                    $.ajax({
+                        url: "{{route('admin.berita')}}",
+                        type: "GET",
+                        dataType: "JSON",
+                        beforeSend: function () {
+                            $('#berita').addClass('block-mode-loading');
+                        },
+                        success: function (res) {
+                            $('#berita').removeClass('block-mode-loading');
+                        }, 
+                        error: function (err) {
 
-                }
-            })
+                        }
+                    })
+                    break;
+                case 'product':
+                    $.ajax({
+                        url: "{{route('admin.product')}}",
+                        type: "GET",
+                        dataType: "JSON",
+                        beforeSend: function () {
+                            $('#product').addClass('block-mode-loading');
+                        },
+                        success: function (res) {
+                            $('#product').removeClass('block-mode-loading');
+                        }, 
+                        error: function (err) {
+
+                        }
+                    })
+                    break;
+                case 'kerjasama':
+                    $.ajax({
+                        url: "{{route('admin.kerjasama')}}",
+                        type: "GET",
+                        dataType: "JSON",
+                        beforeSend: function () {
+                            $('#kerjasama').addClass('block-mode-loading');
+                        },
+                        success: function (res) {
+                            $('#kerjasama').removeClass('block-mode-loading');
+                        }, 
+                        error: function (err) {
+
+                        }
+                    })
+                    break;
+                default:
+                    break;
+            }
         }
     </script>
 @endpush

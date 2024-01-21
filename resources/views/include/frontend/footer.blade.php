@@ -63,7 +63,7 @@
 </div>
 {{-- end contact --}}
 <!-- Footer -->
-<footer id="page-footer" class="opacity-1">
+{{-- <footer id="page-footer" class="opacity-1">
     <div class="content py-20 font-size-xs clearfix">
         <div class="float-right">
             Crafted with <i class="fa fa-heart text-pulse"></i> by <a class="font-w600"
@@ -74,5 +74,5 @@
                 class="js-year-copy"></span>
         </div>
     </div>
-</footer>
+</footer> --}}
 <!-- END Footer -->
