@@ -22,39 +22,40 @@
             <div class="btn-group" role="group">
                 <button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i class="fa fa-user-md d-sm-none"></i>
-                    <span class="d-none d-sm-inline-block">Dr. Stone</span>
+                    <span class="d-none d-sm-inline-block">{{auth()->user()->username}}</span>
                     <i class="fa fa-angle-down ml-5"></i>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right min-width-200" aria-labelledby="page-header-user-dropdown">
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="{{route('admin.product')}}">
                         <span>
                             <i class="fa fa-user-circle-o mr-5"></i> Product
                         </span>
-                        <span class="badge badge-primary">5</span>
+                        {{-- <span class="badge badge-primary">5</span> --}}
                     </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="{{route('admin.kegiatan')}}">
                         <span>
                             <i class="fa fa-calendar mr-5"></i> Kegiatan
                         </span>
-                        <span class="badge badge-info">6</span>
                     </a>
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="{{route('admin.berita')}}">
                         <span>
-                            <i class="fa fa-paypal mr-5"></i> Payments
+                            <i class="fa fa-paypal mr-5"></i> Berita
                         </span>
-                        <span class="badge badge-warning">2</span>
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="javascript:void(0)">
-                        <i class="fa fa-pencil mr-5"></i> Profile
-                    </a>
-                    <a class="dropdown-item" href="javascript:void(0)">
+                    <a class="dropdown-item" href="{{route('admin.setting')}}">
                         <i class="fa fa-cog mr-5"></i> Settings
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="javascript:void(0)">
-                        <i class="fa fa-unlock-alt mr-5"></i> Sign Out
-                    </a>
+                    <form action="{{route('logout.action')}}" method="post">
+                        @csrf
+                        <button class="dropdown-item" type="submit">
+                            <i class="fa fa-unlock-alt mr-5"></i> Sign Out
+                        </button>
+                        {{-- <a class="dropdown-item" href="{{route('logout.action')}}">
+                            <i class="fa fa-unlock-alt mr-5"></i> Sign Out
+                        </a> --}}
+                    </form>
                 </div>
             </div>
             <!-- END User Dropdown -->

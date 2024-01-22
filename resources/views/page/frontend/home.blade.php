@@ -6,40 +6,25 @@
 @section('content')
     <div id="main-container">
         <div class="js-slider slick-nav-black slick-dotted-inner slick-dotted-white" data-dots="true" data-arrows="true">
-            <div class="bg-image" style="background-image: url('assets/media/home/gedung-aup.jpg');">
-                <div class="hero bg-primary-dark-op">
-                    <div class="hero-inner">
-                        <div class="content content-full text-center">
-                            <h1 class="display-4 font-w700 text-white mb-10 invisible" data-toggle="appear"
-                                data-class="animated fadeInDown">Smart Fisheries Village</h1>
-                            <h2 class="font-w400 text-white-op mb-50 invisible" data-toggle="appear"
-                                data-class="animated fadeInUp" data-timeout="250">It’s Time to Create Your Next Amazing
-                                Experince</h2>
-                            <a class="btn btn-hero btn-noborder btn-rounded btn-primary invisible" data-toggle="appear"
-                                data-class="animated bounceIn" data-timeout="750" href="#about">
-                                <i class="si si-rocket mr-10"></i> Get Started
-                            </a>
+            @foreach ($kegiatan as $kegiatans)
+                <div class="bg-image" style="background-image: url('assets/media/kegiatan/{{$kegiatans->gambar}}');">
+                    <div class="hero bg-primary-dark-op">
+                        <div class="hero-inner">
+                            <div class="content content-full text-center">
+                                <h4 class="display-4 font-w700 text-white mb-10 invisible" data-toggle="appear"
+                                    data-class="animated fadeInDown">{{$kegiatans->judul}}</h4>
+                                <h5 class="font-w400 text-white-op mb-50 invisible" data-toggle="appear"
+                                    data-class="animated fadeInUp" data-timeout="250">It’s Time to Create Your Next Amazing
+                                    Experince</h5>
+                                <a class="btn btn-hero btn-noborder btn-rounded btn-primary invisible" data-toggle="appear"
+                                    data-class="animated bounceIn" data-timeout="750" href="#about">
+                                    <i class="si si-rocket mr-10"></i> Get Started
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="bg-image" style="background-image: url('assets/media/home/gedung-aup2.jpg');">
-                <div class="hero bg-primary-dark-op">
-                    <div class="hero-inner">
-                        <div class="content content-full text-center">
-                            <h1 class="display-4 font-w700 text-white mb-10 invisible" data-toggle="appear"
-                                data-class="animated fadeInDown">Smart Fisheries Village</h1>
-                            <h2 class="font-w400 text-white-op mb-50 invisible" data-toggle="appear"
-                                data-class="animated fadeInUp" data-timeout="250">It’s Time to Create Your Next
-                                Amazing Project</h2>
-                            <a class="btn btn-hero btn-noborder btn-rounded btn-primary invisible" data-toggle="appear"
-                                data-class="animated bounceIn" data-timeout="750" href="#about">
-                                <i class="si si-rocket mr-10"></i> Get Started
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 
@@ -110,18 +95,20 @@
                     @foreach ($berita as $beritas)    
                         <!-- Row #1 -->
                         <div class="col-md-6 col-xl-4">
-                            <a class="block block-transparent border-left border-5x border-primary bg-image" style="background-image: url('{{asset('assets/media/kegiatan/'.$beritas->gambar)}}');" href="{{route('kegiatan.detail', $beritas->id)}}">
-                                <div class="block-content block-content-full bg-black-op">
-                                    <div class="pt-100">
-                                        <h3 class="h4 text-white font-w700 mb-10">{{$beritas->judul}}</h3>
-                                        <h4 class="text-white-op font-size-default mb-0">
-                                            <span class="mr-10">
-                                                <i class="fa fa-clock-o"></i> {{$beritas->created_at->diffForHumans()}}
-                                            </span>
-                                        </h4>
+                            {{-- <div class="" style="min-height: 300px"> --}}
+                                <a class="block block-transparent border-left border-5x border-primary bg-image" style="background-image: url('{{asset('assets/media/kegiatan/'.$beritas->gambar)}}');" href="{{route('kegiatan.detail', $beritas->id)}}">
+                                    <div class="block-content block-content-full bg-black-op">
+                                        <div class="pt-100">
+                                            <h3 class="h4 text-white font-w700 mb-10">{{(strlen( $beritas->judul )>= 60) ? substr($beritas->judul, 0, 60).".." : $beritas->judul}}</h3>
+                                            <h4 class="text-white-op font-size-default mb-0">
+                                                <span class="mr-10">
+                                                    <i class="fa fa-clock-o"></i> {{$beritas->created_at->diffForHumans()}}
+                                                </span>
+                                            </h4>
+                                        </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            {{-- </div> --}}
                         </div>
                     @endforeach
                 </div>
@@ -141,41 +128,6 @@
                         </a>
                     </div>
                 @endforeach
-                {{-- <div class="col-md-6 col-lg-4 col-xl-3 animated fadeIn mt-4">
-                    <a class="img-link img-link-zoom-in img-thumb img-lightbox" href="assets/media/photos/photo18@2x.jpg">
-                        <img class="img-fluid" src="assets/media/photos/photo18.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 animated fadeIn mt-4">
-                    <a class="img-link img-link-zoom-in img-thumb img-lightbox" href="assets/media/photos/photo19@2x.jpg">
-                        <img class="img-fluid" src="assets/media/photos/photo19.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 animated fadeIn mt-4">
-                    <a class="img-link img-link-zoom-in img-thumb img-lightbox" href="assets/media/photos/photo20@2x.jpg">
-                        <img class="img-fluid" src="assets/media/photos/photo20.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 animated fadeIn mt-4">
-                    <a class="img-link img-link-zoom-in img-thumb img-lightbox" href="assets/media/photos/photo21@2x.jpg">
-                        <img class="img-fluid" src="assets/media/photos/photo21.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 animated fadeIn mt-4">
-                    <a class="img-link img-link-zoom-in img-thumb img-lightbox" href="assets/media/photos/photo22@2x.jpg">
-                        <img class="img-fluid" src="assets/media/photos/photo22.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 animated fadeIn mt-4">
-                    <a class="img-link img-link-zoom-in img-thumb img-lightbox" href="assets/media/photos/photo21@2x.jpg">
-                        <img class="img-fluid" src="assets/media/photos/photo21.jpg" alt="">
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-4 col-xl-3 animated fadeIn mt-4">
-                    <a class="img-link img-link-zoom-in img-thumb img-lightbox" href="assets/media/photos/photo22@2x.jpg">
-                        <img class="img-fluid" src="assets/media/photos/photo22.jpg" alt="">
-                    </a>
-                </div> --}}
             </div>
         </div>
         {{-- end galleri --}}
@@ -218,5 +170,22 @@
             </div>
         </div>
         {{-- end Product --}}
+
+        {{-- galleri --}}
+        <div id="galeri" class="my-50 text-center content-heading">
+            <h2 class="font-w700 text-black mb-10">Kerjasama</h2>
+        </div>
+        <div class="col-12 items-push js-gallery img-fluid-100">
+            <div class="row">
+                @foreach ($kerjasama as $kerja)
+                    <div class="col-md-6 col-lg-4 col-xl-3 animated fadeIn mt-4">
+                        <a class="img-link img-link-zoom-in img-thumb img-lightbox" href="{{asset('assets/media/kerjasama/'.$kerja->gambar)}}">
+                            <img class="img-fluid" src="{{asset('assets/media/kerjasama/'.$kerja->gambar)}}" alt="">
+                        </a>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+        {{-- end galleri --}}
     </div>
 @endsection

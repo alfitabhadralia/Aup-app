@@ -13,7 +13,7 @@ class KegiatanController extends Controller
 {
     //
     public function index(Request $request){
-        $kegiatan = Kegiatan::all();
+        $kegiatan = Kegiatan::whereNot('kategori', 'berita')->get();
         $kegiatanToday = Kegiatan::whereDate('created_at', Carbon::today())->get();
         
         if ($request->ajax()) {
