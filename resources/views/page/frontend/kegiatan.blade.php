@@ -18,7 +18,7 @@
 
     <div class="content">
         <!-- Image Cards Media Widgets -->
-        <h2 class="content-heading">Berita <small>Hari ini</small></h2>
+        <h2 class="content-heading">Berita Hari ini</h2>
         <div class="row">
             @foreach ($kegiatanHeadline as $value)    
                 <!-- Row #1 -->

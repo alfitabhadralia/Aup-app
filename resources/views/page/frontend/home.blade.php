@@ -14,8 +14,7 @@
                                 <h4 class="display-4 font-w700 text-white mb-10 invisible" data-toggle="appear"
                                     data-class="animated fadeInDown">{{$kegiatans->judul}}</h4>
                                 <h5 class="font-w400 text-white-op mb-50 invisible" data-toggle="appear"
-                                    data-class="animated fadeInUp" data-timeout="250">It’s Time to Create Your Next Amazing
-                                    Experince</h5>
+                                    data-class="animated fadeInUp" data-timeout="250">Smart Fisheries Village UPT Politeknik AUP Kampus Serang</h5>
                                 <a class="btn btn-hero btn-noborder btn-rounded btn-primary invisible" data-toggle="appear"
                                     data-class="animated bounceIn" data-timeout="750" href="#about">
                                     <i class="si si-rocket mr-10"></i> Get Started
@@ -31,7 +30,7 @@
     <div class="content">
         {{-- About --}}
         <div id="about" class="my-50 text-center content-heading">
-            <h2 class="font-w700 text-black mb-10">About <small>Us</small></h2>
+            <h2 class="font-w700 text-black mb-10">Tentang Kami</h2>
         </div>
         <div class="block   block-fx-shadow">
             <div class="block-content block-content-full">
@@ -40,7 +39,7 @@
                         <h3>{{$setting->where('nama', 'title_about')->first()->value}}</h3>
                         <p>{!! $setting->where('nama', 'deskripsi_about')->first()->value !!}</p>
                     </div>
-                    <div class="col-md-6 order-md-2">
+                    <div class="col-md-3 order-md-2">
                         <div class="row gutters-tiny js-gallery img-fluid-100">
                             <div class="col-12 text-center">
                                 <a class="img-link img-link-simple img-thumb img-lightbox"
@@ -117,7 +116,7 @@
         {{-- end berita --}}
         {{-- galleri --}}
         <div id="galeri" class="my-50 text-center content-heading">
-            <h2 class="font-w700 text-black mb-10">Gallery</h2>
+            <h2 class="font-w700 text-black mb-10">Galeri Foto</h2>
         </div>
         <div class="col-12 items-push js-gallery img-fluid-100">
             <div class="row">
@@ -133,7 +132,7 @@
         {{-- end galleri --}}
         {{-- Product --}}
         <div id="product" class="my-50 text-center content-heading">
-            <h2 class="font-w700 text-black mb-10">Product</h2>
+            <h2 class="font-w700 text-black mb-10">Produk</h2>
         </div>
         <div class="col-12">
             <div class="d-flex justify-content-center">
