@@ -73,14 +73,14 @@
                 <li class="nav-main-heading"><span class="sidebar-mini-visible">MG</span><span class="sidebar-mini-hidden">Manage</span></li>
                 <li class="{{ (request()->segment(2) == 'product') ? 'open' : '' }}">
                     <a class="nav-submenu" data-toggle="nav-submenu" href="#">
-                        <i class="fa fa-user-circle-o"></i><span class="sidebar-mini-hide">Product</span>
+                        <i class="fa fa-user-circle-o"></i><span class="sidebar-mini-hide">Produk</span>
                     </a>
                     <ul>
                         <li>
                             <a href="{{route('admin.product')}}">Manage</a>
                         </li>
                         <li>
-                            <a href="{{route('admin.product.create')}}">Add Product</a>
+                            <a href="{{route('admin.product.create')}}">Add Produk</a>
                         </li>
                     </ul>
                 </li>
