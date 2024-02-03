@@ -101,7 +101,7 @@
                     <i class="fa fa-heart"></i>
                 </a>
                 <a class="btn btn-hero btn-alt-primary" href="javascript:void(0)">
-                    <i class="fa fa-envelope mr-5"></i> Contact
+                    <i class="fa fa-envelope mr-5"></i> Kontak
                 </a>
             </div> --}}
         </div>
