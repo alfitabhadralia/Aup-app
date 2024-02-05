@@ -49,7 +49,7 @@
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
                 <a href="/product" class="btn btn-dual-secondary" data-toggle="layout"
                     data-action="header_search_on">
-                    <span class="d-none d-sm-inline-block">Product</span>
+                    <span class="d-none d-sm-inline-block">Produk</span>
                 </a>
                 <!-- END Logo Section -->
 

@@ -55,7 +55,7 @@
                                     <i class="fa fa-plus-square-o text-gray fa-2x d-xl-none"></i>
                                     <i class="fa fa-plus-square-o text-gray fa-3x d-none d-xl-inline-block"></i>
                                 </p>
-                                <p class="font-w600 font-size-sm text-uppercase">Add Product</p>
+                                <p class="font-w600 font-size-sm text-uppercase">Add Produk</p>
                             </div>
                         </a>
                     </div>
@@ -135,7 +135,7 @@
             <!-- Product -->
             <div id="product" class="block block-rounded block-bordered invisible" data-toggle="appear">
                 <div class="block-header block-header-default">
-                    <h3 class="block-title">Current Product</h3>
+                    <h3 class="block-title">Current Produk</h3>
                     <div class="block-options">
                         <button type="button" onclick="refresh(product)" class="btn-block-option">
                             <i class="si si-refresh"></i>

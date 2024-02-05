@@ -133,7 +133,7 @@
         {{-- end galleri --}}
         {{-- Product --}}
         <div id="product" class="my-50 text-center content-heading">
-            <h2 class="font-w700 text-black mb-10">Product</h2>
+            <h2 class="font-w700 text-black mb-10">Produk</h2>
         </div>
         <div class="col-12">
             <div class="d-flex justify-content-center">
