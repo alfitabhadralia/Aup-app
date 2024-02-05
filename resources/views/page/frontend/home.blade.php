@@ -6,6 +6,22 @@
 @section('content')
     <div id="main-container">
         <div class="js-slider slick-nav-black slick-dotted-inner slick-dotted-white" data-dots="true" data-arrows="true">
+            <div class="bg-image" style="background-image: url('assets/media/home/gerbang.jpeg');">
+                <div class="hero bg-primary-dark-op">
+                    <div class="hero-inner">
+                        <div class="content content-full text-center">
+                            <h4 class="display-4 font-w700 text-white mb-10 invisible" data-toggle="appear"
+                                data-class="animated fadeInDown">Smart Fisheries Village</h4>
+                            <h5 class="font-w400 text-white-op mb-50 invisible" data-toggle="appear"
+                                data-class="animated fadeInUp" data-timeout="250">Smart Fisheries Village UPT Politeknik AUP Kampus Serang</h5>
+                            <a class="btn btn-hero btn-noborder btn-rounded btn-primary invisible" data-toggle="appear"
+                                data-class="animated bounceIn" data-timeout="750" href="#about">
+                                <i class="si si-rocket mr-10"></i> Get Started
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             @foreach ($kegiatan as $kegiatans)
                 <div class="bg-image" style="background-image: url('assets/media/kegiatan/{{$kegiatans->gambar}}');">
                     <div class="hero bg-primary-dark-op">
@@ -39,7 +55,7 @@
                         <h3>{{$setting->where('nama', 'title_about')->first()->value}}</h3>
                         <p>{!! $setting->where('nama', 'deskripsi_about')->first()->value !!}</p>
                     </div>
-                    <div class="col-md-3 order-md-2">
+                    <div class="col-md-6 order-md-2">
                         <div class="row gutters-tiny js-gallery img-fluid-100">
                             <div class="col-12 text-center">
                                 <a class="img-link img-link-simple img-thumb img-lightbox"
@@ -63,18 +79,15 @@
                 <div class="row">
                     @foreach ($kegiatan as $item)    
                         <!-- Row -->
-                        <div class="col-md-6 col-xl-3">
+                        <div class="col-xl-4 col-sm-6">
                             <div class="block">
                                 <div class="block-content block-content-full text-center bg-image"
-                                    style="background-image: url('assets/media/kegiatan/{{$item->gambar}}'); height: 200px;">
+                                    style="background-image: url('assets/media/kegiatan/{{$item->icon}}'); height: 200px;">
                                 </div>
-                                <div class="block-content block-content-full">
-                                    <h5>{{substr($item->judul, 0, 50)}}..</h5>
-                                    <p>{{substr($item->deskripsi, 0, 200)}}..</p>
-                                </div>
-                                <div class="block-content block-content-full text-center bg-body-light">
+                                <div class="block-content block-content-full text-center" style="min-height: 150px">
+                                    <h5>{{$item->judul}}</h5>
                                     <a class="btn btn-alt-secondary" href="javascript:void(0)">
-                                        <i class="fa fa-eye mr-5"></i> Detail..
+                                        <i class="fa fa-eye mr-5"></i> Detail
                                     </a>
                                 </div>
                             </div>

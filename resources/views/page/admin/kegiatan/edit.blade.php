@@ -62,6 +62,19 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label class="col-12">Icon File Input</label>
+                            <div class="col-12">
+                                <img src="{{asset('assets/media/kegiatan/'.$kegiatan->icon)}}" class=" border bg-secondary" style="max-width: 500px">
+                            </div>
+                            <div class="col-8">
+                                <div class="custom-file">
+                                    <!-- Populating custom file input label with the selected filename (data-toggle="custom-file-input" is initialized in Helpers.coreBootstrapCustomFileInput()) -->
+                                    <input type="file" class="custom-file-input" id="icon" name="icon" data-toggle="custom-file-input">
+                                    <label class="custom-file-label" for="icon">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <div class="col-12">
                                 <button type="submit" class="btn btn-alt-primary">Submit</button>
                             </div>
@@ -77,61 +90,3 @@
     </main>
     <!-- END Main Container -->
 @endsection
-{{-- @push('script')
-    <script src="{{asset('assets/js/plugins/datatables/jquery.dataTables.min.js')}}"></script>
-    <script src="{{asset('assets/js/plugins/datatables/dataTables.bootstrap4.min.js')}}"></script>
-    <script>
-        $(document).ready(function () {
-            $('#table-product').DataTable({
-                processing: true,
-                serverSide: true,
-                ajax: "{{ route('admin.product') }}",
-                columns: [{
-                    data: 'DT_RowIndex',
-                    name: 'no',
-                    // className: 'dt-center'
-                }, 
-                {
-                    data: 'nama',
-                    name: 'nama'
-                }, 
-                {
-                    data: 'harga',
-                    name: 'harga'
-                }, 
-                {
-                    data: 'gambar',
-                    name: 'gambar'
-                },
-                {
-                    data: 'created_at',
-                    name: 'dibuat'
-                },  
-                {
-                    data: 'action',
-                    name: 'action',
-                }]
-            });
-            $('#btn_refresh_product').on('click', function () {
-                refreshProduct();
-            });
-        });
-
-        function refreshProduct() {
-            $.ajax({
-                url: "{{route('admin.product')}}",
-                type: "GET",
-                dataType: "JSON",
-                beforeSend: function () {
-                    $('#product').addClass('block-mode-loading');
-                },
-                success: function (res) {
-                    $('#product').removeClass('block-mode-loading');
-                }, 
-                error: function (err) {
-
-                }
-            })
-        }
-    </script>
-@endpush --}}
