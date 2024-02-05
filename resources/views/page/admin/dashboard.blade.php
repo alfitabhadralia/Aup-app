@@ -97,7 +97,7 @@
                                 <div class="mb-10">
                                     <i class="fa fa-user-circle-o fa-3x text-corporate"></i>
                                 </div>
-                                <div class="font-size-h4 font-w600">5 Product</div>
+                                <div class="font-size-h4 font-w600">5 Produk</div>
                                 <div class="text-muted">2 were added today!</div>
                             </div>
                         </div>
