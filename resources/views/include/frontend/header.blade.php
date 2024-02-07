@@ -31,7 +31,7 @@
 
                 <!-- Logo Section -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                <a href="#about" class="btn btn-dual-secondary" data-toggle="layout"
+                <a href="/#about" class="btn btn-dual-secondary" data-toggle="layout"
                     data-action="header_search_on">
                     <span class="d-none d-sm-inline-block">Tentang</span>
                 </a>
@@ -55,10 +55,10 @@
 
                 <!-- Logo Section -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                <a href="#page-footer" class="btn btn-dual-secondary" data-toggle="layout"
+                {{-- <a href="#page-footer" class="btn btn-dual-secondary" data-toggle="layout"
                     data-action="header_search_on">
                     <span class="d-none d-sm-inline-block">Kontak</span>
-                </a>
+                </a> --}}
                 <!-- END Logo Section -->
 
             </div>

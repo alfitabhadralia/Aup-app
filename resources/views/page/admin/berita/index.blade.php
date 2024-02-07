@@ -49,7 +49,7 @@
                                     <i class="fa fa-newspaper-o fa-3x text-primary"></i>
                                 </div>
                                 <div class="font-size-h4 font-w600">Rp. {{number_format($berita->max('harga'), 0,',','.')}}</div>
-                                <div class="text-muted">Harga termalah dari semua berita!</div>
+                                <div class="text-muted">Harga termahal dari semua berita!</div>
                             </div>
                         </div>
                     </a>
