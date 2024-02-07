@@ -60,6 +60,16 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label class="col-12">Icon File Input</label>
+                            <div class="col-8">
+                                <div class="custom-file">
+                                    <!-- Populating custom file input label with the selected filename (data-toggle="custom-file-input" is initialized in Helpers.coreBootstrapCustomFileInput()) -->
+                                    <input type="file" class="custom-file-input" id="icon" name="icon" data-toggle="custom-file-input">
+                                    <label class="custom-file-label" for="icon">Choose file</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <div class="col-12">
                                 <button type="submit" class="btn btn-alt-primary">Submit</button>
                             </div>

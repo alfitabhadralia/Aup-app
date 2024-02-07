@@ -74,8 +74,13 @@ class KegiatanController extends Controller
         // dd($request->all());
         $new_image = $request->file('gambar');
         $file_name = time() . $request->nama_product.'.' . $new_image->extension();
-
         $new_image->move('assets/media/kegiatan', $file_name);
+
+        if ($request->file('icon')) {
+            $new_icon = $request->file('icon');
+            $file_icon = time() . $request->nama_product.'.' . $new_icon->extension();
+            $new_icon->move('assets/media/kegiatan', $file_name);;
+        }
 
         $save = Kegiatan::create([
             'judul' => $request->judul,
@@ -84,6 +89,7 @@ class KegiatanController extends Controller
             'kategori' => 'kegiatan',
             'deskripsi' => $request->deskripsi,
             'gambar' => $file_name,
+            'icon' => $file_icon,
         ]);
 
         if ($save) {
@@ -128,6 +134,15 @@ class KegiatanController extends Controller
 
             $kegiatan->gambar = $file_name;
         }
+        if ($request->file('icon')) {
+            File::delete('assets/media/kegiatan/'.$kegiatan->icon);
+            
+            $new_image = $request->file('icon');
+            $file_name = time() . $kegiatan->nama.'.' . $new_image->extension();
+            $new_image->move('assets/media/kegiatan', $file_name);
+
+            $kegiatan->icon = $file_name;
+        }
         $save = $kegiatan->update();
         
         if ($save) {
@@ -149,7 +164,7 @@ class KegiatanController extends Controller
     }
 
     public function home(){
-        $kegiatan = Kegiatan::paginate(8);
+        $kegiatan = Kegiatan::where('kategori', 'berita')->paginate(8);
         $kegiatanHeadline = Kegiatan::where('headline', 1)->limit(3)->get();
         // return $kegiatan;
         return view('page.frontend.kegiatan', compact('kegiatan', 'kegiatanHeadline'));
