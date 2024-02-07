@@ -50,14 +50,14 @@
         </div>
         <div class="block   block-fx-shadow">
             <div class="block-content block-content-full">
-                <div class="row ml-4 mr-4">
-                    <div class="col-md-6 order-md-1 py-20">
+                <div class="row ml-4 mr-3">
+                    <div class="col-md-8 order-md-1 py-20">
                         <h3>{{$setting->where('nama', 'title_about')->first()->value}}</h3>
                         <p>{!! $setting->where('nama', 'deskripsi_about')->first()->value !!}</p>
                     </div>
-                    <div class="col-md-6 order-md-2">
+                    <div class="col-md-4 order-md-2">
                         <div class="row gutters-tiny js-gallery img-fluid-100">
-                            <div class="col-12 text-center">
+                            <div class="col-9 text-center">
                                 <a class="img-link img-link-simple img-thumb img-lightbox"
                                     href="{{asset('assets/media/setting/'.$setting->where('nama', 'gambar_about')->first()->value)}}">
                                     <img class="img-fluid" style="min-width: 300px" src="{{asset('assets/media/setting/'.$setting->where('nama', 'gambar_about')->first()->value)}}" alt="">
