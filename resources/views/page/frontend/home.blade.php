@@ -79,7 +79,7 @@
                 <div class="row">
                     @foreach ($kegiatan as $item)    
                         <!-- Row -->
-                        <div class="col-xl-4 col-sm-6">
+                        <div class="col-xl-3 col-sm-6">
                             <div class="block">
                                 <div class="block-content block-content-full text-center bg-image"
                                     style="background-image: url('assets/media/kegiatan/{{$item->icon}}'); height: 200px;">
@@ -161,7 +161,7 @@
                                 </div>
                                 <div class="block-content border-bottom">
                                     <h4 class="font-size-h5 mb-10">{{$value->nama}}</h4>
-                                    <h5 class="font-size-h3 font-w300 mb-5">Rp. {{number_format($value->harga, 0,',','.')}}</h5>
+                                    <!-- <h5 class="font-size-h3 font-w300 mb-5">Rp. {{number_format($value->harga, 0,',','.')}}</h5> -->
                                 </div>
                                 <div class="block-content">
                                     <div class="row">
