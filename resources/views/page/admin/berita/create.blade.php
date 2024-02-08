@@ -4,7 +4,7 @@
 @endsection
 @section('breadcrumb')
     <a class="breadcrumb-item" href="{{route('dashboard')}}">Admin</a>
-    <a class="breadcrumb-item" href="{{route('admin.berita')}}">berita</a>
+    <a class="breadcrumb-item" href="{{route('admin.berita')}}">Berita</a>
     <span class="breadcrumb-item active">Create</span>
 @endsection
 @section('content')
