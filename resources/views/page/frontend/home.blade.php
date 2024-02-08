@@ -161,12 +161,12 @@
                                 </div>
                                 <div class="block-content border-bottom">
                                     <h4 class="font-size-h5 mb-10">{{$value->nama}}</h4>
-                                    <h5 class="font-size-h3 font-w300 mb-5">Rp. {{number_format($value->harga, 0,',','.')}}</h5>
+                                    {{-- <h5 class="font-size-h3 font-w300 mb-5">Rp. {{number_format($value->harga, 0,',','.')}}</h5> --}}
                                 </div>
                                 <div class="block-content">
                                     <div class="row">
                                         <p>
-                                            {{substr($value->deskripsi, 0, 200)}}
+                                            {{substr($value->deskripsi, 0, 180)}}..
                                         </p>
                                     </div>
                                 </div>
