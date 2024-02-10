@@ -112,7 +112,7 @@
                 </li>
                 <li class="{{ (request()->segment(2) == 'kerjasama') ? 'open' : '' }}">
                     <a class="nav-submenu" data-toggle="nav-submenu" href="#">
-                        <i class="fa fa-newspaper-o"></i><span class="sidebar-mini-hide">kerjasama</span>
+                        <i class="fa fa-newspaper-o"></i><span class="sidebar-mini-hide">Kerjasama</span>
                     </a>
                     <ul>
                         <li>

@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 order-md-1 py-20">
-                    <h4>Social Media</h4>
+                    <h4>Media Sosial</h4>
                     <div class="row">
                         <button type="button" class="btn btn-dual-secondary" data-toggle="layout"
                             data-action="header_search_on">
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 order-md-1 py-20">
-                    <h4>Contact</h2>
+                    <h4>Kontak</h2>
                         <p>{{App\Models\Setting::where('nama','email_kontak')->first()->value}}</p>
                         <p>{{App\Models\Setting::where('nama','phone_kontak')->first()->value}}</p>
                         <p>{{App\Models\Setting::where('nama','alamat_kontak')->first()->value}}</p>
