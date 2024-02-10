@@ -3,6 +3,8 @@
     <div class="block-content block-content-full">
         <div class="container">
             <div class="row">
+                <h4>Smart Fisheries Village @2024
+                </h4>
                 <div class="col-md-3 order-md-1 py-20">
                     <h4>Social Media</h4>
                     <div class="row">
