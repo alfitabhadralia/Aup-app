@@ -11,6 +11,7 @@
                 <div class="content content-full content-top">
                     <h1 class="py-50 text-white text-center">{{$kegiatan->judul}}</h1>
                 </div>
+
             </div>
         </div>
         <!-- END Header Section -->
@@ -35,7 +36,7 @@
             @foreach ($kegiatanHeadline as $value)    
                 <!-- Row #1 -->
                 <div class="col-md-6 col-xl-4">
-                    <a class="block block-transparent border-left border-5x border-primary bg-image" style="background-image: url('{{asset('assets/media/kegiatan/'.$value->gambar)}}');" href="javascript:void(0)">
+                    <a href="{{route('kegiatan.detail', ['id' => $value->id])}}" class="block block-transparent border-left border-5x border-primary bg-image" style="background-image: url('{{asset('assets/media/kegiatan/'.$value->gambar)}}');">
                         <div class="block-content block-content-full bg-black-op">
                             <div class="pt-100">
                                 <h3 class="h4 text-white font-w700 mb-10">{{$value->judul}}</h3>
