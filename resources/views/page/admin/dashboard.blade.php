@@ -154,7 +154,7 @@
                                     <th class="d-none d-sm-table-cell">Harga</th>
                                     <th class="d-none d-sm-table-cell">gambar</th>
                                     <th class="d-none d-sm-table-cell">dibuat</th>
-                                    <th class="d-none d-sm-table-cell" style="width: 300px;">Action</th>
+                                    {{-- <th class="d-none d-sm-table-cell" style="width: 300px;">Action</th> --}}
                                 </tr>
                             </thead>
                         </table>
@@ -186,7 +186,7 @@
                                     <th class="d-none d-sm-table-cell">Headline</th>
                                     <th class="d-none d-sm-table-cell">Gambar</th>
                                     <th class="d-none d-sm-table-cell">Dibuat</th>
-                                    <th class="d-none d-sm-table-cell" style="width: 300px;">Action</th>
+                                    {{-- <th class="d-none d-sm-table-cell" style="width: 300px;">Action</th> --}}
                                 </tr>
                             </thead>
                         </table>
@@ -218,7 +218,7 @@
                                     <th class="d-none d-sm-table-cell" style="width: auto;">Name</th>   
                                     <th class="d-none d-sm-table-cell">gambar</th>
                                     <th class="d-none d-sm-table-cell">dibuat</th>
-                                    <th class="d-none d-sm-table-cell" style="width: 300px;">Action</th>
+                                    {{-- <th class="d-none d-sm-table-cell" style="width: 300px;">Action</th> --}}
                                 </tr>
                             </thead>
                         </table>
@@ -264,10 +264,7 @@
                     data: 'created_at',
                     name: 'dibuat'
                 },  
-                {
-                    data: 'action',
-                    name: 'action',
-                }]
+                ]
             });
             $('#table-kegiatan').DataTable({
                 processing: true,
@@ -293,10 +290,7 @@
                     data: 'created_at',
                     name: 'created_at'
                 },
-                {
-                    data: 'action',
-                    name: 'action',
-                }]
+                ]
             });
             $('#table-kerjasama').DataTable({
                 processing: true,
@@ -318,10 +312,7 @@
                     data: 'created_at',
                     name: 'dibuat'
                 },  
-                {
-                    data: 'action',
-                    name: 'action',
-                }]
+                ]
             });
         
             // $('#btn_refresh_product').on('click', function () {

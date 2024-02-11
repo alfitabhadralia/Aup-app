@@ -44,7 +44,7 @@
 
             @yield('content')
 
-            {{-- @include('include.admin.footer') --}}
+            @include('include.admin.footer')
         </div>
         <!-- END Page Container -->
 

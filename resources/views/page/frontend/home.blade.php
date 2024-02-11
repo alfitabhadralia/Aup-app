@@ -14,7 +14,7 @@
                                 data-class="animated fadeInDown">Smart Fisheries Village</h4>
                             <h5 class="font-w400 text-white-op mb-50 invisible" data-toggle="appear"
                                 data-class="animated fadeInUp" data-timeout="250">Smart Fisheries Village UPT Politeknik AUP Kampus Serang</h5>
-                            <a class="btn btn-hero btn-noborder btn-rounded btn-primary invisible" data-toggle="appear"
+                            <a href="https://politeknikaup.ac.id" class="btn btn-hero btn-noborder btn-rounded btn-primary invisible" data-toggle="appear"
                                 data-class="animated bounceIn" data-timeout="750" href="#about">
                                 <i class="si si-rocket mr-10"></i> Get Started
                             </a>
@@ -31,7 +31,7 @@
                                     data-class="animated fadeInDown">{{$kegiatans->judul}}</h4>
                                 <h5 class="font-w400 text-white-op mb-50 invisible" data-toggle="appear"
                                     data-class="animated fadeInUp" data-timeout="250">Smart Fisheries Village UPT Politeknik AUP Kampus Serang</h5>
-                                <a class="btn btn-hero btn-noborder btn-rounded btn-primary invisible" data-toggle="appear"
+                                <a href="https://politeknikaup.ac.id" class="btn btn-hero btn-noborder btn-rounded btn-primary invisible" data-toggle="appear"
                                     data-class="animated bounceIn" data-timeout="750" href="#about">
                                     <i class="si si-rocket mr-10"></i> Get Started
                                 </a>
@@ -106,7 +106,7 @@
                 <div class="row">
                     @foreach ($berita as $beritas)    
                         <!-- Row #1 -->
-                        <div class="col-md-6 col-xl-4">
+                        <div class="col-xl-4 col-sm-6">
                             {{-- <div class="" style="min-height: 300px"> --}}
                                 <a class="block block-transparent border-left border-5x border-primary bg-image" style="background-image: url('{{asset('assets/media/kegiatan/'.$beritas->gambar)}}');" href="{{route('kegiatan.detail', $beritas->id)}}">
                                     <div class="block-content block-content-full bg-black-op">
@@ -134,7 +134,7 @@
         <div class="col-12 items-push js-gallery img-fluid-100">
             <div class="row">
                 @foreach ($gallery as $key)
-                    <div class="col-md-6 col-lg-4 col-xl-3 animated fadeIn mt-4">
+                    <div class="col-xl-3 col-sm-6 animated fadeIn mt-4">
                         <a class="img-link img-link-zoom-in img-thumb img-lightbox" href="{{asset('assets/media/kegiatan/'.$key->gambar)}}">
                             <img class="img-fluid" src="{{asset('assets/media/kegiatan/'.$key->gambar)}}" alt="">
                         </a>
@@ -152,7 +152,7 @@
                 <div class="row">
                     @foreach ($product as $value)
                         <!-- Row 4 -->
-                        <div class="col-xl-3">
+                        <div class="col-xl-3 col-sm-6">
                             <div class="block  ">
                                 <div class="block-content p-0 overflow-hidden">
                                     <a class="img-link" href="{{asset('assets/media/product/'.$value->gambar)}}">
@@ -183,14 +183,14 @@
         </div>
         {{-- end Product --}}
 
-        {{-- galleri --}}
+        {{-- kerjasama --}}
         <div id="galeri" class="my-50 text-center content-heading">
             <h2 class="font-w700 text-black mb-10">Kerjasama</h2>
         </div>
         <div class="col-12 items-push js-gallery img-fluid-100">
-            <div class="row">
+            <div class="row" style="justify-content: center;">
                 @foreach ($kerjasama as $kerja)
-                    <div class="col-md-6 col-lg-4 col-xl-3 animated fadeIn mt-4">
+                    <div class="col-xl-2 col-sm-6 animated fadeIn mt-4">
                         <a class="img-link img-link-zoom-in img-thumb img-lightbox" href="{{asset('assets/media/kerjasama/'.$kerja->gambar)}}">
                             <img class="img-fluid" src="{{asset('assets/media/kerjasama/'.$kerja->gambar)}}" alt="">
                         </a>
@@ -198,6 +198,6 @@
                 @endforeach
             </div>
         </div>
-        {{-- end galleri --}}
+        {{-- end kerjasama --}}
     </div>
 @endsection
