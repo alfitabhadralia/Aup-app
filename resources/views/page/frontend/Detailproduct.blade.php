@@ -1,11 +1,11 @@
 @extends('layout.frontend.layout')
 @section('title')
-    <title>Kegiatan - SFV-AUP-Serang</title>
+    <title>Product - SFV-AUP-Serang</title>
 @endsection
 
 @section('content')
     <!-- Header Section -->
-    <div class="bg-image" style="background-image: url('{{asset('assets/media/photos/photo21@2x.jpg')}}');">
+    <div class="bg-image" style="background-image: url('{{asset('assets/media/home/gerbang.jpeg')}}');">
         <div class="bg-primary-dark-op">
             <div class="content content-full content-top">
                 <div class="my-50 text-center">

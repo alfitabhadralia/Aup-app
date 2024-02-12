@@ -6,7 +6,7 @@
 @section('content')
     <div id="">
         <!-- Header Section -->
-        <div class="bg-image" style="background-image: url('{{asset('assets/media/photos/photo21@2x.jpg')}}');">
+        <div class="bg-image" style="background-image: url('{{asset('assets/media/home/gerbang.jpeg')}}');">
             <div class="bg-primary-dark-op">
                 <div class="content content-full content-top">
                     <h1 class="py-50 text-white text-center">{{$kegiatan->judul}}</h1>

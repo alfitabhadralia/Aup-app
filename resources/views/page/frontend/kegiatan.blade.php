@@ -6,7 +6,7 @@
 @section('content')
     <div id="">
         <!-- Header Section -->
-        <div class="bg-image" style="background-image: url('assets/media/photos/photo21@2x.jpg');">
+        <div class="bg-image" style="background-image: url('assets/media/home/gerbang.jpeg');">
             <div class="bg-primary-dark-op">
                 <div class="content content-full content-top">
                     <h1 class="py-50 text-white text-center">Kegiatan</h1>
@@ -75,7 +75,7 @@
         </div>
         <!-- END Image Cards Media Widgets -->
         <!-- Hero -->
-        <div class="bg-image mb-4" style="background-image: url('assets/media/photos/photo34@2x.jpg');">
+        <div class="bg-image mb-4" style="background-image: url('assets/media/home/gerbang.jpeg');">
             <div class="bg-black-op">
                 <div class="content text-center mb-4">
                     <div class="py-20">

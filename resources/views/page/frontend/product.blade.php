@@ -6,7 +6,7 @@
 @section('content')
     <div id="">
         <!-- Header Section -->
-        <div class="bg-image" style="background-image: url('assets/media/photos/photo21@2x.jpg');">
+        <div class="bg-image" style="background-image: url('assets/media/home/gerbang.jpeg');">
             <div class="bg-primary-dark-op">
                 <div class="content content-full content-top">
                     <h1 class="py-50 text-white text-center">Product</h1>
@@ -31,7 +31,6 @@
                                 </div>
                                 <div class="block-content border-bottom">
                                     <h4 class="font-size-h5 mb-10">{{$item->nama}}</h4>
-                                    <h5 class="font-size-h3 font-w300 mb-5">Rp. {{number_format($item->harga, 0,',','.')}}</h5>
                                 </div>
                                 <div class="block-content">
                                     <div class="row">

@@ -23,7 +23,7 @@
 
                 <!-- Logo Section -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                <a href="/" class="btn btn-dual-secondary" data-toggle="layout"
+                <a href="/" class="btn btn-dual-secondary {{ (request()->segment(1) == '' ) ? 'active' : ''}}" data-toggle="layout"
                     data-action="header_search_on">
                     <span class="d-none d-sm-inline-block">Beranda</span>
                 </a>
@@ -39,7 +39,7 @@
 
                 <!-- Logo Section -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                <a href="/kegiatan" class="btn btn-dual-secondary" data-toggle="layout"
+                <a href="/kegiatan" class="btn btn-dual-secondary {{ (request()->segment(1) == 'kegiatan' ) ? 'active' : ''}}" data-toggle="layout"
                     data-action="header_search_on">
                     <span class="d-none d-sm-inline-block">Kegiatan</span>
                 </a>
@@ -47,7 +47,7 @@
 
                 <!-- Logo Section -->
                 <!-- Layout API, functionality initialized in Template._uiApiLayout() -->
-                <a href="/product" class="btn btn-dual-secondary" data-toggle="layout"
+                <a href="/product" class="btn btn-dual-secondary {{ (request()->segment(1) == 'product' ) ? 'active' : ''}}" data-toggle="layout"
                     data-action="header_search_on">
                     <span class="d-none d-sm-inline-block">Produk</span>
                 </a>

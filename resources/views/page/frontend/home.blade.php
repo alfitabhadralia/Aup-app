@@ -86,7 +86,7 @@
                                 </div>
                                 <div class="block-content block-content-full text-center" style="min-height: 150px">
                                     <h5>{{$item->judul}}</h5>
-                                    <a class="btn btn-alt-secondary" href="javascript:void(0)">
+                                    <a class="btn btn-alt-secondary" href="{{route('kegiatan.detail', $item->id)}}">
                                         <i class="fa fa-eye mr-5"></i> Detail
                                     </a>
                                 </div>
