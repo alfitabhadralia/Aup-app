@@ -112,6 +112,12 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label class="col-12" for="website_link">Website</label>
+                                <div class="col-md-9">
+                                    <input disabled type="text" class="form-control" id="website_link" name="website_link" placeholder="kerjasama.." value="">
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label class="col-12">Gambar File</label>
                                 <div class="col-12">
                                     <img id="img-preview" class=" border bg-secondary" style="max-width: 500px">
@@ -250,6 +256,7 @@
                     console.log(res);
                     $('#modal-large').modal('show');
                     $('#nama_kerjasama').val(res.nama);
+                    $('#website_link').val(res.website_link);
                     $('#harga').val(res.harga);
                     $('#deskripsi').val(res.deskripsi);
                     $('#img-preview').attr("src",'/assets/media/kerjasama/'+res.gambar);

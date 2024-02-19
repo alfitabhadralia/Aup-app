@@ -33,10 +33,9 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-12" for="harga">Harga kerjasama</label>
+                            <label class="col-12" for="website_link">Website</label>
                             <div class="col-md-9">
-                                <input type="number" class="form-control" id="harga" name="harga" placeholder="Harga.." value="{{ $kerjasama->harga }}">
-                                {{-- <div class="form-text text-muted">Further info about this input</div> --}}
+                                <input type="text" class="form-control" id="website_link" name="website_link" placeholder="website.." value="{{ old('website_link') }}">
                             </div>
                         </div>
                         <div class="form-group row">

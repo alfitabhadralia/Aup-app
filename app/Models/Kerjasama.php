@@ -14,5 +14,6 @@ class Kerjasama extends Model
     protected $fillable = [
         'nama',
         'gambar',
+        'website_link',
     ];
 }
