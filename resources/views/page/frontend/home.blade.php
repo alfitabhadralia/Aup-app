@@ -16,7 +16,7 @@
                                 data-class="animated fadeInUp" data-timeout="250">Smart Fisheries Village UPT Politeknik AUP Kampus Serang</h5>
                             <a href="https://politeknikaup.ac.id" class="btn btn-hero btn-noborder btn-rounded btn-primary invisible" data-toggle="appear"
                                 data-class="animated bounceIn" data-timeout="750" href="#about">
-                                <i class="si si-rocket mr-10"></i> Get Started
+                                <i class="si si-rocket mr-10"></i> Ayo Mulai!
                             </a>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                                     data-class="animated fadeInUp" data-timeout="250">Smart Fisheries Village UPT Politeknik AUP Kampus Serang</h5>
                                 <a href="https://politeknikaup.ac.id" class="btn btn-hero btn-noborder btn-rounded btn-primary invisible" data-toggle="appear"
                                     data-class="animated bounceIn" data-timeout="750" href="#about">
-                                    <i class="si si-rocket mr-10"></i> Get Started
+                                    <i class="si si-rocket mr-10"></i> Ayo Mulai!
                                 </a>
                             </div>
                         </div>

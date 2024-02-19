@@ -27,44 +27,9 @@
         <div class="block block-rounded block-fx-shadow">
             <div class="block-content p-0 bg-image" style="background-image: url('{{asset('assets/media/product/'.$product->gambar)}}');">
                 <div class="px-20 py-150 bg-black-op text-center rounded-top">
-                    <h5 class="font-size-h1 font-w300 text-white mb-10">Rp. {{number_format($product->harga, 0,',','.')}}</h5>
-                    <span class="badge badge-primary text-uppercase font-w700 py-10 px-15">For Sale</span>
+                    <span class="badge badge-primary text-uppercase font-w700 py-10 px-15">Beli Sekarang</span>
                 </div>
             </div>
-            {{-- <div class="block-content bg-body-light">
-                <div class="row py-10">
-                    <div class="col-6 col-md-4">
-                        <p>
-                            <i class="fa fa-fw fa-bed text-muted mr-5"></i> <strong>2</strong> Bedrooms
-                        </p>
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <p>
-                            <i class="fa fa-fw fa-bath text-muted mr-5"></i> <strong>1</strong> Bathroom
-                        </p>
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <p>
-                            <i class="fa fa-fw fa-car text-muted mr-5"></i> <strong>1</strong> Parking
-                        </p>
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <p>
-                            <i class="fa fa-fw fa-arrows-alt text-muted mr-5"></i> <strong>310</strong> sq.ft.
-                        </p>
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <p>
-                            <i class="fa fa-fw fa-fire text-muted mr-5"></i> Electricity
-                        </p>
-                    </div>
-                    <div class="col-6 col-md-4">
-                        <p>
-                            <i class="fa fa-fw fa-globe text-muted mr-5"></i> <strong>1</strong> Gbps
-                        </p>
-                    </div>
-                </div>
-            </div> --}}
             <div class="block-content block-content-full">
                 <div class="row">
                     <div class="col-md-6 order-md-2 py-20">

@@ -35,7 +35,7 @@
                                     <i class="fa fa-calendar fa-3x text-elegance"></i>
                                 </div>
                                 <div class="font-size-h4 font-w600">Rp. {{number_format($product->min('harga'), 0,',','.')}}</div>
-                                <div class="text-muted">Harga termurah dari semua product!</div>
+                                <div class="text-muted">Harga termurah dari semua produk!</div>
                             </div>
                         </div>
                     </a>
@@ -48,7 +48,7 @@
                                     <i class="fa fa-newspaper-o fa-3x text-primary"></i>
                                 </div>
                                 <div class="font-size-h4 font-w600">Rp. {{number_format($product->max('harga'), 0,',','.')}}</div>
-                                <div class="text-muted">Harga termalah dari semua product!</div>
+                                <div class="text-muted">Harga termurah dari semua produk!</div>
                             </div>
                         </div>
                     </a>

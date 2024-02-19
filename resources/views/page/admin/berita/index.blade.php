@@ -22,7 +22,7 @@
                                 <div class="mb-10">
                                     <i class="fa fa-user-circle-o fa-3x text-corporate"></i>
                                 </div>
-                                <div class="font-size-h4 font-w600">{{$berita->count()}} berita</div>
+                                <div class="font-size-h4 font-w600">{{$berita->count()}} Berita</div>
                                 <div class="text-muted">{{$beritaToday->count()}} were added today!</div>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                                     <i class="fa fa-calendar fa-3x text-elegance"></i>
                                 </div>
                                 <div class="font-size-h4 font-w600">{{$berita->where('headline', '1')->count()}} Headline</div>
-                                <div class="text-muted">jumlah headline pada semua berita!</div>
+                                <div class="text-muted">Jumlah headline pada semua berita!</div>
                             </div>
                         </div>
                     </a>

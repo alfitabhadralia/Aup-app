@@ -9,7 +9,7 @@
         <div class="bg-image" style="background-image: url('assets/media/home/gerbang.jpeg');">
             <div class="bg-primary-dark-op">
                 <div class="content content-full content-top">
-                    <h1 class="py-50 text-white text-center">Product</h1>
+                    <h1 class="py-50 text-white text-center">Produk</h1>
                 </div>
             </div>
         </div>
