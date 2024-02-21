@@ -187,11 +187,11 @@
         <div id="galeri" class="my-50 text-center content-heading">
             <h2 class="font-w700 text-black mb-10">Kerjasama</h2>
         </div>
-        <div class="col-12 items-push js-gallery img-fluid-100">
+        <div class="col-12 items-push">
             <div class="row" style="justify-content: center;">
                 @foreach ($kerjasama as $kerja)
                     <div class="col-xl-2 col-sm-6 animated fadeIn mt-4">
-                        <a class="img-link img-link-zoom-in img-thumb img-lightbox" href="{{asset('assets/media/kerjasama/'.$kerja->gambar)}}">
+                        <a class=" img-thumb img-lightbox" href="{{$kerja->website_link}}">
                             <img class="img-fluid" src="{{asset('assets/media/kerjasama/'.$kerja->gambar)}}" alt="">
                         </a>
                     </div>

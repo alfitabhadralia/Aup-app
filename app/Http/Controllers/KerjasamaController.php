@@ -80,6 +80,7 @@ class KerjasamaController extends Controller
         $save = kerjasama::create([
             'nama' => $request->nama_kerjasama,
             'gambar' => $file_name,
+            'website_link' => $request->website_link,
         ]);
 
         if ($save) {
@@ -110,6 +111,7 @@ class KerjasamaController extends Controller
         
         $kerjasama = kerjasama::find($id);
         $kerjasama->nama = $request->nama_kerjasama;
+        $kerjasama->website_link = $request->website_link;
         
         if ($request->file('gambar')) {
             File::delete('assets/media/kerjasama/'.$kerjasama->gambar);
