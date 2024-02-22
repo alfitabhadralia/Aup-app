@@ -27,7 +27,10 @@
         <div class="block block-rounded block-fx-shadow">
             <div class="block-content p-0 bg-image" style="background-image: url('{{asset('assets/media/product/'.$product->gambar)}}');">
                 <div class="px-20 py-150 bg-black-op text-center rounded-top">
-                    <span class="badge badge-primary text-uppercase font-w700 py-10 px-15">Beli Sekarang</span>
+                    <a class="badge badge-primary text-uppercase font-w700 py-10 px-15" href="http://wa.me/{{App\Models\Setting::where('nama','phone_product')->first()->value}}">
+                        Beli Sekarang
+                    </a>
+                    {{-- <span class="badge badge-primary text-uppercase font-w700 py-10 px-15">Beli Sekarang</span>--}}
                 </div>
             </div>
             <div class="block-content block-content-full">

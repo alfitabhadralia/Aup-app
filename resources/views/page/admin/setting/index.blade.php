@@ -136,6 +136,12 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
+                                            <label class="col-lg-4 col-form-label" for="phone_product">Phone Product<span class="text-danger">*</span></label>
+                                            <div class="col-lg-8">
+                                                <input type="text" class="form-control" id="phone_product" name="phone_product" value="{{$setting->where('nama','phone_product')->first()->value}}">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="alamat_kontak">Alamat <span class="text-danger">*</span></label>
                                             <div class="col-lg-8">
                                                 <textarea class="form-control" id="alamat_kontak" name="alamat_kontak" rows="5" >{{$setting->where('nama','alamat_kontak')->first()->value}}</textarea>

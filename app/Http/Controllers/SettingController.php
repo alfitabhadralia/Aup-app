@@ -25,6 +25,7 @@ class SettingController extends Controller
             'kontak' => [
                 'email_kontak' => 'required',
                 'phone_kontak' => 'required',
+                'phone_product' => 'required',
                 'alamat_kontak' => 'required',
             ],
             'sosialmedia' => [
@@ -45,7 +46,7 @@ class SettingController extends Controller
                 'gambar_about', 'title_about', 'deskripsi_about', 
             ],
             'kontak' => [
-                'email_kontak', 'phone_kontak', 'alamat_kontak'
+                'email_kontak', 'phone_kontak', 'alamat_kontak', 'phone_product'
             ],
             'sosialmedia' => [
                 'facebook', 'instagram', 'twitter', 'website'
