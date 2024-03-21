@@ -26,7 +26,6 @@
                 <!-- Logo -->
                 <div class="content-header-item">
                     <a class="link-effect font-w700" href="{{route('dashboard')}}">
-                        <i class="si si-fire text-primary"></i>
                         <span class="font-size-xl text-dual-primary-dark">SPV</span><span class="font-size-xl text-primary">AUP</span>
                     </a>
                 </div>

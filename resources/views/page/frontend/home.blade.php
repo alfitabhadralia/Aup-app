@@ -155,9 +155,10 @@
                         <div class="col-xl-3 col-sm-6">
                             <div class="block  ">
                                 <div class="block-content p-0 overflow-hidden">
-                                    <a class="img-link" href="{{asset('assets/media/product/'.$value->gambar)}}">
+                                    <a class="img-link" href="{{route('product.detail', $value->id)}}">
                                         <img class="img-fluid" src="{{asset('assets/media/product/'.$value->gambar)}}" alt="" style="min-height: 200px; max-height: 210px;margin-left: auto;margin-right: auto;">
                                     </a>
+
                                 </div>
                                 <div class="block-content border-bottom">
                                     <h4 class="font-size-h5 mb-10">{{$value->nama}}</h4>

@@ -25,8 +25,8 @@
                         <div class="col-xl-3">
                             <div class="block  ">
                                 <div class="block-content p-0 overflow-hidden">
-                                    <a class="img-link" href="be_pages_real_estate_listing.html">
-                                        <img class="img-fluid  " src="{{asset('assets/media/product/'.$item->gambar)}}" alt="" style="min-height: 200px;">
+                                    <a class="img-link" href="{{route('product.detail', $item->id)}}">
+                                        <img class="img-fluid" src="{{asset('assets/media/product/'.$item->gambar)}}" alt="" style="min-height: 200px; max-height: 210px;margin-left: auto;margin-right: auto;">
                                     </a>
                                 </div>
                                 <div class="block-content border-bottom">
