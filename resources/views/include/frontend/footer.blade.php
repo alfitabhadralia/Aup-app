@@ -50,7 +50,12 @@
                                 {{App\Models\Setting::where('nama','phone_kontak')->first()->value}}
                             </a>
                         </p>
-                        <p>{{App\Models\Setting::where('nama','alamat_kontak')->first()->value}}</p>
+                        <p>
+                            <a href="https://www.google.com/maps/place/Politeknik+Ahli+Usaha+Perikanan+(AUP-STP)+Kampus+Banten/@-6.027585,106.162315,15z/data=!4m6!3m5!1s0x2e41f317e72814b5:0x564b4aa9407bf867!8m2!3d-6.0275849!4d106.1623154!16s%2Fg%2F11sq24r24l?hl=en&entry=ttu">
+                                <!-- {{App\Models\Setting::where('nama','phone_kontak')->first()->value}} -->
+                                {{App\Models\Setting::where('nama','alamat_kontak')->first()->value}}
+                            </a>
+                        </p>
                 </div>
                 <div class="col-md-6 order-md-2 py-20">
                     <div class="row gutters-tiny">
