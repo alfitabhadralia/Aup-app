@@ -12,7 +12,7 @@
     <main id="main-container">
 
         <!-- Quick Navigation -->
-        <div class="bg-body-dark">
+        <!-- <div class="bg-body-dark">
             <div class="content">
                 <div class="row">
                     <div class="col-6 col-md-4 col-xl-2">
@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- END Quick Navigation -->
 
         <!-- Page Content -->
@@ -91,26 +91,26 @@
             <!-- Overview -->
             <div class="row invisible" data-toggle="appear">
                 <div class="col-md-4">
-                    <a class="block block-rounded block-bordered block-link-shadow" href="javascript:void(0)">
+                    <a class="block block-rounded block-bordered block-link-shadow" href="/product">
                         <div class="block-content block-content-full">
                             <div class="py-20 text-center">
                                 <div class="mb-10">
                                     <i class="fa fa-user-circle-o fa-3x text-corporate"></i>
                                 </div>
-                                <div class="font-size-h4 font-w600">5 Produk</div>
+                                <div class="font-size-h4 font-w600">Produk</div>
                                 <div class="text-muted">2 were added today!</div>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-4">
-                    <a class="block block-rounded block-bordered block-link-shadow" href="javascript:void(0)">
+                    <a class="block block-rounded block-bordered block-link-shadow" href="/kegiatan">
                         <div class="block-content block-content-full">
                             <div class="py-20 text-center">
                                 <div class="mb-10">
                                     <i class="fa fa-calendar fa-3x text-elegance"></i>
                                 </div>
-                                <div class="font-size-h4 font-w600">6 Kegiatan</div>
+                                <div class="font-size-h4 font-w600">Kegiatan</div>
                                 <div class="text-muted">4 are scheduled for today!</div>
                             </div>
                         </div>
@@ -123,7 +123,7 @@
                                 <div class="mb-10">
                                     <i class="fa fa-newspaper-o fa-3x text-primary"></i>
                                 </div>
-                                <div class="font-size-h4 font-w600">2 Berita</div>
+                                <div class="font-size-h4 font-w600">Berita</div>
                                 <div class="text-muted">Pending for tomorrow.</div>
                             </div>
                         </div>
